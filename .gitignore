@@ -1,0 +1,6 @@
+.idea/
+.sass-cache/
+*.gem
+bin/*
+!bin/placeholder
+.env
