@@ -9,13 +9,13 @@ deploy:
   - provider: heroku
     api_key:
       secure: Lv2f5VTR98m6pAcdE2g6mZKxr3bfNmY8hQtF5ItLdijWjX0G3P+fVPvtIfeBlYtmJAblHIItVpANnjpBL1M/Bi4HT77VDnKI9Ss2paah6fppkO+6LIWkR0pOHUxSTGNkHF7x7uRtu1/GPRHu/yysnnFJKQoWTtbMcXlU6n5hGK0=
-    app: linkedin-to-resume-generator
+    app: linkedin2resume-generator
     on:
-      repo: mefellows/linkedin-to-resume-generator
+      repo: mefellows/linkedin2resume-generator
   - provider: rubygems
     api_key:
       secure: Db23e9FQhY3Re/UEs0nvR+Gn6ji0sO4jnTO+FY6m69LhAcAL4Sfs4kSP287h70HCi/dCYvgTPrzR8R3ihPthBAjCBVVJ/SHeP25k8zfJAtMhFI+9Rvgas0jFfQFA4jTyLqMUeZZQsH6YnPRYcayHMzl53inRTWlSlnvUXQWoKEA=
-    gem: linkedin-to-resume-generator
+    gem: linkedin2resume-generator
     on:
       tags: true
-      repo: mefellows/linkedin-to-resume-generator
+      repo: mefellows/linkedin2resume-generator

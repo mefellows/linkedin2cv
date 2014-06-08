@@ -1,6 +1,6 @@
 require 'rspec'
-require 'linkedin-to-resume/commands/linkedin-to-resume'
-require 'linkedin-to-resume/filters/filters'
+require 'linkedin2resume/commands/linkedin2resume'
+require 'linkedin2resume/filters/filters'
 require 'spec_helper'
 
 url = URI::parse('http://foo.com/foo/bar')

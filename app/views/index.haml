@@ -1,0 +1,11 @@
+-if login?
+  %a{:href => "/auth/logout"} Logout
+  %p= profile.headline
+  %br
+  %div= "Your token is  #{session[:atoken]}"
+
+-else
+  %a{:href => "/auth"} Login using LinkedIn
+
+-if session[:authorize_url]
+  %p="yo, auth url #{session[:authorize_url]}"

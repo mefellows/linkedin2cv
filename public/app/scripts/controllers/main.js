@@ -1,17 +1,17 @@
 'use strict';
 
-angular.module('linkedin-to-resumeApp')
-    .controller('MainCtrl', ['$scope', '$http', 'LinkedinToResume', function ($scope, $http, LinkedinToResume) {
+angular.module('linkedin2resumeApp')
+    .controller('MainCtrl', ['$scope', '$http', 'Linkedin2Resume', function ($scope, $http, Linkedin2Resume) {
 
         // Default website
         $scope.message = 'Sockets will replace me - enter stuff above to find out!'
 
         /**
-         * Generate a LinkedinToResume
+         * Generate a Linkedin2Resume
          */
-        $scope.generateLinkedinToResume = function (ping) {
+        $scope.generateLinkedin2Resume = function (ping) {
 
-            var data = LinkedinToResume.getResponse({'message': ping})
+            var data = Linkedin2Resume.getResponse({'message': ping})
             data.then(function (result) {
                 console.log(result)
 

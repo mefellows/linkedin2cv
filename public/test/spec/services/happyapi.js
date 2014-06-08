@@ -1,18 +1,18 @@
 'use strict';
 
-describe('Service: linkedin-to-resumeApi', function () {
+describe('Service: linkedin2resumeApi', function () {
 
   // load the service's module
-  beforeEach(module('linkedin-to-resumeGeneratorApp'));
+  beforeEach(module('linkedin2resumeGeneratorApp'));
 
   // instantiate service
-  var linkedin-to-resumeApi;
-  beforeEach(inject(function (_linkedin-to-resumeApi_) {
-    linkedin-to-resumeApi = _linkedin-to-resumeApi_;
+  var linkedin2resumeApi;
+  beforeEach(inject(function (_linkedin2resumeApi_) {
+    linkedin2resumeApi = _linkedin2resumeApi_;
   }));
 
   it('should do something', function () {
-    expect(!!linkedin-to-resumeApi).toBe(true);
+    expect(!!linkedin2resumeApi).toBe(true);
   });
 
 });

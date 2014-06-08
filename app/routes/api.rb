@@ -3,15 +3,15 @@ require 'eventmachine'
 require 'em-websocket'
 require 'sinatra/reloader'
 require 'sinatra/param'
-require 'linkedin-to-resume/version'
+require 'linkedin2resume/version'
 require "sinatra/json"
 require "json"
 require "sinatra-websocket"
-
+require "./app"
 #
 # Public: API for the Application
 #
-module LinkedinToResume
+module Linkedin2Resume
   module Routes
       class API < Sinatra::Application
         include Logging
@@ -35,10 +35,10 @@ module LinkedinToResume
           200
         end
 
-        # Public: Main API entry point to run the LinkedinToResume service
+        # Public: Main API entry point to run the Linkedin2Resume service
         #
         #
-        get '/api/linkedin-to-resume/:uri' do
+        get '/api/linkedin2resume/:uri' do
 
         end
 

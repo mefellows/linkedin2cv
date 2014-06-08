@@ -34,16 +34,16 @@ Setup the UI
     
 View your Web front end by visiting ```http://localhost:8080/``` in your favourite web browser.
 
-You will want to change the name of files/folders from 'linkedin-to-resume' to the name of your app. If you have the 'rename' command, this is the quickest way forward (```brew install rename``` if you don't have it and are running Mac OSX). Create and run this little helper:
+You will want to change the name of files/folders from 'linkedin2resume' to the name of your app. If you have the 'rename' command, this is the quickest way forward (```brew install rename``` if you don't have it and are running Mac OSX). Create and run this little helper:
 
 vi rename.sh
 
     #!/bin/bash
     
-    find . -type f -iname '*linkedin-to-resume*' | grep -v '\.git' | xargs rename 's@haveaguess@<your app>@gi' {}
-    find . -type d -iname '*linkedin-to-resume*' | grep -v '\.git' | xargs rename 's@haveaguess@<your app>@gi' {}
-    find . -type f | grep -v '\.git' | xargs sed -i 's/linkedin-to-resume/<your app>/g'
-    find . -type f | grep -v '\.git' | xargs sed -i 's/LinkedinToResume/<your app in UpperCamelCase>/g'
+    find . -type f -iname '*linkedin2resume*' | grep -v '\.git' | xargs rename 's@haveaguess@<your app>@gi' {}
+    find . -type d -iname '*linkedin2resume*' | grep -v '\.git' | xargs rename 's@haveaguess@<your app>@gi' {}
+    find . -type f | grep -v '\.git' | xargs sed -i 's/linkedin2resume/<your app>/g'
+    find . -type f | grep -v '\.git' | xargs sed -i 's/Linkedin2Resume/<your app in UpperCamelCase>/g'
 
 Add execute perms
 
@@ -70,12 +70,12 @@ You will of course need to create an app in Heroku before deployment, a typical 
 By default, we log to the stdout stream (as per Heroku's guide: ). If you'd like to change this behaviour, set the ```LOG_OUTPUT_FILENAME``` environment variable:
 
 
-    $ bin/linkedin-to-resume  magic http://www.onegeek.com.au/
-     INFO linkedin-to-resume.linkedin-to-resumecommand: Magic happens!
-    $ export LOG_OUTPUT_FILENAME='linkedin-to-resume.log'
-    $ bin/linkedin-to-resume  magic http://www.onegeek.com.au/
-    $ cat linkedin-to-resume.log
-     INFO linkedin-to-resume.linkedin-to-resumecommand: Magic happens!
+    $ bin/linkedin2resume  magic http://www.onegeek.com.au/
+     INFO linkedin2resume.linkedin2resumecommand: Magic happens!
+    $ export LOG_OUTPUT_FILENAME='linkedin2resume.log'
+    $ bin/linkedin2resume  magic http://www.onegeek.com.au/
+    $ cat linkedin2resume.log
+     INFO linkedin2resume.linkedin2resumecommand: Magic happens!
 
 # TODO
 
