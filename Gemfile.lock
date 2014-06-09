@@ -2,13 +2,15 @@ PATH
   remote: .
   specs:
     linkedin2resume (0.0.1)
+      asciidoctor
       clamp
       dotenv
-      em-websocket
+      em-websocket (= 0.3.6)
       eventmachine
       foreman
       haml
       json
+      launchy
       linkedin-oauth2
       log4r
       rake
@@ -18,19 +20,23 @@ PATH
       sinatra-param
       sinatra-websocket
       thin
+      tilt
 
 GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.3.6)
+    asciidoctor (0.1.4)
     backports (3.6.0)
     clamp (0.6.3)
+    crack (0.4.2)
+      safe_yaml (~> 1.0.0)
     daemons (1.1.9)
     diff-lcs (1.2.5)
     dotenv (0.11.1)
       dotenv-deployment (~> 0.0.2)
     dotenv-deployment (0.0.2)
-    em-websocket (0.3.8)
+    em-websocket (0.3.6)
       addressable (>= 2.1.1)
       eventmachine (>= 0.12.9)
     eventmachine (1.0.3)
@@ -44,6 +50,8 @@ GEM
     hashie (2.0.5)
     json (1.8.1)
     jwt (1.0.0)
+    launchy (2.4.2)
+      addressable (~> 2.3)
     linkedin-oauth2 (0.1.1)
       hashie (>= 1.2, < 2.1)
       multi_json (~> 1.0)
@@ -64,14 +72,15 @@ GEM
     rack-test (0.6.2)
       rack (>= 1.0)
     rake (10.3.2)
-    rspec (2.14.1)
-      rspec-core (~> 2.14.0)
-      rspec-expectations (~> 2.14.0)
-      rspec-mocks (~> 2.14.0)
-    rspec-core (2.14.8)
-    rspec-expectations (2.14.5)
+    rspec (2.99.0)
+      rspec-core (~> 2.99.0)
+      rspec-expectations (~> 2.99.0)
+      rspec-mocks (~> 2.99.0)
+    rspec-core (2.99.0)
+    rspec-expectations (2.99.0)
       diff-lcs (>= 1.1.3, < 2.0)
-    rspec-mocks (2.14.6)
+    rspec-mocks (2.99.0)
+    safe_yaml (1.0.3)
     sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -95,12 +104,16 @@ GEM
       rack (>= 1.0.0)
     thor (0.19.1)
     tilt (1.4.1)
+    webmock (1.18.0)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.3)
+  bundler
   linkedin2resume!
   rake
   rspec
+  webmock

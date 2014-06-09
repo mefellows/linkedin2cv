@@ -1,0 +1,11 @@
+AsciiDoc Home Page
+==================
+
+Example Articles
+~~~~~~~~~~~~~~~~
+:billy:  Joel
+- Item 1: {billy}
+
+- Item 2: {billy}
+
+- Item 3

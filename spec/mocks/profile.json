@@ -1,0 +1,686 @@
+{
+  "apiStandardProfileRequest": {
+    "headers": {
+      "_total": 1,
+      "values": [{
+        "name": "x-li-auth-token",
+        "value": "name:yKEG"
+      }]
+    },
+    "url": "http://api.linkedin.com/v1/people/_9bb4q-S_6"
+  },
+  "associations": "Web Standards Group\nLa Trobe University Alumni",
+  "currentShare": {
+    "author": {
+      "firstName": "Matt",
+      "id": "_9bb4q-S_6",
+      "lastName": "Fellows"
+    },
+    "comment": "Taking back content v3: LinkedIn - http://lnkd.in/bayHVGW",
+    "content": {
+      "description": "Test auto-publish from WP to Twitter & LinkedIn @VaughanHaysom...",
+      "eyebrowUrl": "http://www.linkedin.com/share?viewLink=&sid=s5868877033525760000&url=http%3A%2F%2Flnkd%2Ein%2FbayHVGW&urlhash=3kLa",
+      "resolvedUrl": "http://www.onegeek.com.au/uncategorized/taking-back-content-v3-linkedin",
+      "shortenedUrl": "http://lnkd.in/bayHVGW",
+      "submittedUrl": "http://www.onegeek.com.au/uncategorized/taking-back-content-v3-linkedin",
+      "title": "Taking back content v3: LinkedIn"
+    },
+    "id": "s5868877033525760000",
+    "source": {
+      "application": {"name": "onegeek-blog"},
+      "serviceProvider": {"name": "LINKEDIN"}
+    },
+    "timestamp": 1399249369000,
+    "visibility": {"code": "anyone"}
+  },
+  "currentStatus": "Taking back content v3: LinkedIn - http://lnkd.in/bayHVGW",
+  "educations": {
+    "_total": 2,
+    "values": [
+      {
+        "degree": "Cognitive Science / Computer Science",
+        "endDate": {"year": 2007},
+        "fieldOfStudy": "Computer Science, Psychology, Usability",
+        "id": 8579699,
+        "grade": "A",
+        "schoolName": "La Trobe University",
+        "startDate": {"year": 2003}
+      },
+      {
+        "activities": "* Sports Captain\n* Represent school at EIS (Eastern school district sports)\n* Pierre de Coubertin award",
+        "endDate": {"year": 2002},
+        "id": 213369253,
+        "schoolName": "Billanook College",
+        "startDate": {"year": 1997}
+      }
+    ]
+  },
+  "emailAddress": "matt.fellows@onegeek.com.au",
+  "firstName": "Matt",
+  "following": {
+    "companies": {
+      "_total": 6,
+      "values": [
+        {
+          "id": 1028,
+          "name": "Oracle"
+        },
+        {
+          "id": 9016,
+          "name": "Melbourne IT"
+        },
+        {
+          "id": 20226,
+          "name": "Splunk"
+        },
+        {
+          "id": 70179,
+          "name": "Netregistry"
+        },
+        {
+          "id": 166286,
+          "name": "TechTarget"
+        },
+        {
+          "id": 1508717,
+          "name": "REA Group"
+        }
+      ]
+    },
+    "industries": {
+      "_total": 2,
+      "values": [
+        {"id": 96},
+        {"id": 6}
+      ]
+    },
+    "people": {"_total": 0},
+    "specialEditions": {"_total": 0}
+  },
+  "formattedName": "Matt Fellows",
+  "headline": "Manager, Digital at Melbourne IT",
+  "industry": "Information Technology and Services",
+  "interests": "The Internet, Human Computer Interaction and Usability, Basketball, Waterskiing, Web Programming, Java Programming, cloud computing, mobile, responsive design",
+  "jobBookmarks": {
+    "_total": 3,
+    "values": [
+      {
+        "isApplied": false,
+        "isSaved": true,
+        "job": {
+          "active": false,
+          "company": {
+            "id": 9016,
+            "name": "Melbourne IT"
+          },
+          "descriptionSnippet": "Your primary role as Web Technical Lead will be to lead a cross functional team in online projects within the Digital Team, primarily in the eCommerce and Self-Service space.The Technical Lead will work closely with our Senior Agile BA (Iteration Manager), Marketing and Operations teams and will supervise our Manila and Melbourne based development teams to ensure the Web platforms are healthy, and",
+          "id": 10478125,
+          "position": {"title": "Web Technical Lead"},
+          "postingTimestamp": 1389853520000
+        },
+        "savedTimestamp": 1392097557000
+      },
+      {
+        "isApplied": false,
+        "isSaved": true,
+        "job": {
+          "active": false,
+          "company": {
+            "id": 9016,
+            "name": "Melbourne IT"
+          },
+          "descriptionSnippet": "Your primary role as Web Technical Lead will be to lead a cross functional team in online projects within the Digital Team, primarily in the eCommerce and Self-Service space.The Technical Lead will work closely with our Senior Agile BA (Iteration Manager), Marketing and Operations teams and will supervise our Manila and Melbourne based development teams to ensure the Web platforms are healthy, and",
+          "id": 11478704,
+          "position": {"title": "Web Technical Lead"},
+          "postingTimestamp": 1391668622000
+        },
+        "savedTimestamp": 1392097572000
+      },
+      {
+        "isApplied": false,
+        "isSaved": true,
+        "job": {
+          "active": false,
+          "company": {
+            "id": 9016,
+            "name": "Melbourne IT"
+          },
+          "descriptionSnippet": "Melbourne IT helps organisations of all sizes to successfully do business online. Our complete portfolio of Internet-based technology services drives business effectiveness and profitability for more than 350,000 customers around the world. The breadth of our offering extends from helping small businesses build an online presence through to managing the complex technology environments of large ent",
+          "id": 10291949,
+          "position": {"title": "API Web Developer"},
+          "postingTimestamp": 1388644923000
+        },
+        "savedTimestamp": 1392097588000
+      }
+    ]
+  },
+  "lastModifiedTimestamp": 1179849865000,
+  "lastName": "Fellows",
+  "location": {
+    "country": {"code": "au"},
+    "name": "Melbourne, Australia"
+  },
+  "memberUrlResources": {
+    "_total": 2,
+    "values": [
+      {
+        "name": "Company Website",
+        "url": "http://www.melbourneit.com.au"
+      },
+      {
+        "name": "Personal Website",
+        "url": "http://www.onegeek.com.au"
+      }
+    ]
+  },
+  "mfeedRssUrl": "http://www.linkedin.com/rss/mefeed?key=qDNK_YloNKBf9dbWmw17l_wFbl9MGyECGnM1kYpTrUuvt7F6t-OhQlPzHUHplVt",
+  "numConnections": 435,
+  "numConnectionsCapped": false,
+  "numRecommenders": 3,
+  "pictureUrl": "http://m.c.lnkd.licdn.com/mpr/mprx/0_4dB698eI8kV8WU0PZ7kM9GjIhG0CIgfPVH_M9GRc03ItqJ41NfboZC7JaExgesaxJov4J5WC-5ep",
+  "positions": {
+    "_total": 6,
+    "values": [
+      {
+        "company": {
+          "id": 9016,
+          "name": "Melbourne IT"
+        },
+        "id": 522866547,
+        "isCurrent": true,
+        "startDate": {
+          "month": 12,
+          "year": 2013
+        },
+        "summary": "* Thought leadership & change management\n* Drive development team agility via Scrum and DevOps approaches to software development\n* Coach group on applying MVP thinking, delivering incremental business value\n* Lead conversion rate optimisation for Melbourne IT web properties \n* Lead design of modern RESTful API to support Internal/B2B/B2C/App channels\n* Drive move from traditional web frameworks (Zend/PHP) to more performant Angular JS desktop & mobile applications",
+        "title": "Manager, Digital"
+      },
+      {
+        "company": {
+          "id": 9016,
+          "name": "Melbourne IT"
+        },
+        "endDate": {
+          "month": 11,
+          "year": 2013
+        },
+        "id": 416192733,
+        "isCurrent": false,
+        "startDate": {
+          "month": 7,
+          "year": 2013
+        },
+        "summary": "* Team leadership/management (Max team size 15)\n* Change management\n* Web architecture, Web API design & development\n* Led DevOps initiative in ITS Dev; includes transition to public/private cloud, continuous deployment, complete environment automation (puppet) + release automation and ChatOps\n* Iterative development using Scrum/Agile\n* Grow online channel revenue in close partnership with Business Unit. \"Fail-fast\" and learn quickly with metrics in Adobe Analytics (SiteCatalyst) with iterative development, agile processes and compartmentalised change\n* Promote developer-centric culture\n* Deliver custom B2C, B2B and B2B2C web portal for MIT Transformation programme ($1M+ budget)\n* Love Web",
+        "title": "Manager, Web Development"
+      },
+      {
+        "company": {
+          "id": 9016,
+          "name": "Melbourne IT"
+        },
+        "endDate": {
+          "month": 6,
+          "year": 2013
+        },
+        "id": 77110112,
+        "isCurrent": false,
+        "startDate": {
+          "month": 8,
+          "year": 2008
+        },
+        "summary": "* Introduced Agile Development (Scrum) & build automation to improve time to market, improve collaboration and reduce waste improving nr deployment rate > 500%\n* Introduced a fraud detection system > 2 weeks into online channel reducing fraud ~0% of online transaction, saving on charge-backs, domain name registries and manual labour\n* B2B, B2C and B2B2C systems support\n* New product launches into Online and Call Centre channels\n* Served as an SME and Tech Lead on Transformation Project, overseeing the Web stream\n* Lead offshore development initiative in Web arena\n* Introduced Enterprise CMS to reduce manual development\n* Development ambassador, pushing a development-centric culture. Introduction of Hack-days.",
+        "title": "Web Team Leader"
+      },
+      {
+        "company": {
+          "id": 3529478,
+          "name": "Jobs Find You Pty Ltd"
+        },
+        "endDate": {"year": 2012},
+        "id": 530690478,
+        "isCurrent": false,
+        "startDate": {"year": 2009},
+        "summary": "Developed B2C and B2B portals for the online resume platform.\nIntroduced initial monitization via Affiliate and advertiser program.\nAssisted with Strategic direction of company.",
+        "title": "Founding Director"
+      },
+      {
+        "company": {
+          "id": 9016,
+          "name": "Melbourne IT"
+        },
+        "endDate": {
+          "month": 8,
+          "year": 2008
+        },
+        "id": 16959805,
+        "isCurrent": false,
+        "startDate": {
+          "month": 1,
+          "year": 2006
+        },
+        "summary": "* PHP (Zend Framework) development\n* User Interface development using POSH, CSS and JS\n* Web Service Integration\n* Java Application development (J2EE, JSP and XML)",
+        "title": "Web Developer"
+      },
+      {
+        "company": {
+          "id": 2677,
+          "name": "McDonald's"
+        },
+        "endDate": {
+          "month": 2,
+          "year": 2006
+        },
+        "id": 31229767,
+        "isCurrent": false,
+        "startDate": {
+          "month": 9,
+          "year": 2000
+        },
+        "summary": "* Budgets and labour forecasting\n* Stock inventoring\n* Team management & leadership\n* Management training\n* Made delicious hamburgers",
+        "title": "Manager"
+      }
+    ]
+  },
+  "publicProfileUrl": "http://www.linkedin.com/in/digitalmatt",
+  "recommendationsReceived": {
+    "_total": 3,
+    "values": [
+      {
+        "id": 532226681,
+        "recommendationText": "Matt is a true all rounder.  Not only is he the most talented developer I know, he is a brilliant manager and gifted leader.  \r\n\r\nMatt thrives under pressure and has been repeatedly recognised by Melbourne IT for his outstanding contributions.  His broad understanding of programming, architecture and methodologies has also led Matt to become a respected thought leader within Melbourne IT.  Despite the increased demand from all levels of the business, Matt still finds the time to mentor staff, deliver projects on time and drive innovation.\r\n\r\nAmong his recent achievements Matt has championed movements towards agile development, continuous integration, cloud infrastructure, and the development of a RESTful API that will transform the way Melbourne IT builds applications into the future.\r\n\r\nHaving seen the skill, energy and passion Matt brings to his work I have no doubt that he would make a valuable addition to any company.",
+        "recommendationType": {"code": "colleague"},
+        "recommender": {
+          "firstName": "Jon",
+          "id": "kab7KVRC6l",
+          "lastName": "Trumbull"
+        }
+      },
+      {
+        "id": 38386430,
+        "recommendationText": "Matt is an extremely diligent individual and the most respected employee at Melbourne IT. His intelligence and approach to work are highly regarded. I have no second thoughts in saying that he will be a huge asset to any organization.",
+        "recommendationType": {"code": "colleague"},
+        "recommender": {
+          "firstName": "Ramachandra",
+          "id": "u2euVKdSvK",
+          "lastName": "Poduri"
+        }
+      },
+      {
+        "id": 37146210,
+        "recommendationText": "Matt has got to be one of the most amazing people I've ever worked with! I highly enjoyed working with him on a regular basis. With strong interpersonal and people management skills and a passion for the web, Matt has easily earned the trust and respect of his team and the wider ITS group. Matt has significant experience within the web development arena, and I am confident he can achieve more as he has the intelligence, potential and drive. I miss working with Matt, as well as making cupcakes for his team. :) All the best, Matt!",
+        "recommendationType": {"code": "colleague"},
+        "recommender": {
+          "firstName": "Lynette",
+          "id": "1xASZckKZj",
+          "lastName": "Chen"
+        }
+      }
+    ]
+  },
+  "relatedProfileViews": {
+    "_total": 10,
+    "values": [
+      {
+        "firstName": "Mark",
+        "id": "QURO7MHYlN",
+        "lastName": "Murphy"
+      },
+      {
+        "firstName": "Guye",
+        "id": "Ni2ZLKjTJG",
+        "lastName": "Engel"
+      },
+      {
+        "firstName": "Kartic",
+        "id": "boze6xjkMU",
+        "lastName": "Srinivasan"
+      },
+      {
+        "firstName": "Bruce",
+        "id": "HsPzpd4KNF",
+        "lastName": "Tonkin"
+      },
+      {
+        "firstName": "James",
+        "id": "h4UyxfxTc3",
+        "lastName": "Maidment"
+      },
+      {
+        "firstName": "Mark",
+        "id": "Ie0hDXmHwr",
+        "lastName": "Jenkins"
+      },
+      {
+        "firstName": "Theo",
+        "id": "cBP7JFxQH7",
+        "lastName": "Hnarakis"
+      },
+      {
+        "firstName": "Remone",
+        "id": "Hf9GOm8lOx",
+        "lastName": "Tawadros"
+      },
+      {
+        "firstName": "Peter",
+        "id": "aAmG9FBpd9",
+        "lastName": "Berry"
+      },
+      {
+        "firstName": "Robert",
+        "id": "L9RclMh7qo",
+        "lastName": "Scironni"
+      }
+    ]
+  },
+  "skills": {
+    "_total": 46,
+    "values": [
+      {
+        "id": 69,
+        "skill": {"name": "Change Management"}
+      },
+      {
+        "id": 70,
+        "skill": {"name": "conversion rate optimization"}
+      },
+      {
+        "id": 71,
+        "skill": {"name": "Agile Methodologies"}
+      },
+      {
+        "id": 72,
+        "skill": {"name": "Web Development"}
+      },
+      {
+        "id": 73,
+        "skill": {"name": "APIs"}
+      },
+      {
+        "id": 74,
+        "skill": {"name": "E-commerce"}
+      },
+      {
+        "id": 75,
+        "skill": {"name": "HTML 5"}
+      },
+      {
+        "id": 76,
+        "skill": {"name": "Web Applications"}
+      },
+      {
+        "id": 77,
+        "skill": {"name": "Agile Project Management"}
+      },
+      {
+        "id": 78,
+        "skill": {"name": "Continuous Delivery"}
+      },
+      {
+        "id": 79,
+        "skill": {"name": "DevOps"}
+      },
+      {
+        "id": 80,
+        "skill": {"name": "Web Architecture"}
+      },
+      {
+        "id": 81,
+        "skill": {"name": "Solution Architecture"}
+      },
+      {
+        "id": 82,
+        "skill": {"name": "Team Leadership"}
+      },
+      {
+        "id": 83,
+        "skill": {"name": "Cloud Computing"}
+      },
+      {
+        "id": 84,
+        "skill": {"name": "Web Analytics"}
+      },
+      {
+        "id": 85,
+        "skill": {"name": "Automation"}
+      },
+      {
+        "id": 86,
+        "skill": {"name": "Management"}
+      },
+      {
+        "id": 87,
+        "skill": {"name": "Web Services"}
+      },
+      {
+        "id": 88,
+        "skill": {"name": "Apache"}
+      },
+      {
+        "id": 89,
+        "skill": {"name": "Java"}
+      },
+      {
+        "id": 90,
+        "skill": {"name": "SEO"}
+      },
+      {
+        "id": 91,
+        "skill": {"name": "Zend Framework"}
+      },
+      {
+        "id": 92,
+        "skill": {"name": "Web Project Management"}
+      },
+      {
+        "id": 93,
+        "skill": {"name": "Mobile Devices"}
+      },
+      {
+        "id": 94,
+        "skill": {"name": "User Interface Design"}
+      },
+      {
+        "id": 95,
+        "skill": {"name": "JavaScript"}
+      },
+      {
+        "id": 96,
+        "skill": {"name": "CSS"}
+      },
+      {
+        "id": 97,
+        "skill": {"name": "Java Enterprise Edition"}
+      },
+      {
+        "id": 98,
+        "skill": {"name": "Spring"}
+      },
+      {
+        "id": 99,
+        "skill": {"name": "User Experience"}
+      },
+      {
+        "id": 100,
+        "skill": {"name": "Mobile Applications"}
+      },
+      {
+        "id": 101,
+        "skill": {"name": "jQuery"}
+      },
+      {
+        "id": 102,
+        "skill": {"name": "Information Architecture"}
+      },
+      {
+        "id": 103,
+        "skill": {"name": "Google Analytics"}
+      },
+      {
+        "id": 104,
+        "skill": {"name": "MySQL"}
+      },
+      {
+        "id": 105,
+        "skill": {"name": "MVC"}
+      },
+      {
+        "id": 106,
+        "skill": {"name": "Git"}
+      },
+      {
+        "id": 107,
+        "skill": {"name": "OSGi"}
+      },
+      {
+        "id": 108,
+        "skill": {"name": "JSON"}
+      },
+      {
+        "id": 109,
+        "skill": {"name": "Analytics"}
+      },
+      {
+        "id": 110,
+        "skill": {"name": "AJAX"}
+      },
+      {
+        "id": 111,
+        "skill": {"name": "JIRA"}
+      },
+      {
+        "id": 112,
+        "skill": {"name": "PHP"}
+      },
+      {
+        "id": 113,
+        "skill": {"name": "Puppet"}
+      },
+      {
+        "id": 114,
+        "skill": {"name": "CMS"}
+      }
+    ]
+  },
+  "suggestions": {"toFollow": {
+    "companies": {
+      "_count": 10,
+      "_start": 0,
+      "values": [
+        {
+          "id": 118612,
+          "name": "Melbourne Convention Bureau"
+        },
+        {
+          "id": 1215845,
+          "name": "Hub Melbourne"
+        },
+        {
+          "id": 1838879,
+          "name": "Committee for Melbourne"
+        },
+        {
+          "id": 974782,
+          "name": "Melbourne Food & Wine Festival"
+        },
+        {
+          "id": 437035,
+          "name": "Innovation Digital"
+        },
+        {
+          "id": 1808377,
+          "name": "Stone Digital"
+        },
+        {
+          "id": 254118,
+          "name": "Line Digital"
+        },
+        {
+          "id": 722746,
+          "name": "WeAreDigital"
+        },
+        {
+          "id": 1745319,
+          "name": "UNION / Digital"
+        },
+        {
+          "id": 1099112,
+          "name": "Destination Melbourne"
+        }
+      ]
+    },
+    "industries": {"_total": 0},
+    "newsSources": {"_total": 0},
+    "people": {"_total": 0}
+  }},
+  "summary": "Experienced Development Thought Leader with over 8 commercial years delivering eCommerce Web Applications. Strong online B2C, B2B and API capability with some conversion rate optimisation experience.\n\nI'm an adaptive leader, and challenge teams to think differently about software delivery; no one approach or technology works in all situations. Agile and DevOps are just labels, it's how you approach software delivery that really matters.\n\nYou'll find me hacking on GitHub in my spare time in Ruby, Scala & Angular, and have 8+ years experience in Java, PHP, and your HTML5/JS stack.\n\nI love the Web, I love to challenge the status quo and love what I do.",
+  "threeCurrentPositions": {
+    "_total": 1,
+    "values": [{
+      "company": {
+        "id": 9016,
+        "name": "Melbourne IT"
+      },
+      "id": 522866547,
+      "isCurrent": true,
+      "startDate": {
+        "month": 12,
+        "year": 2013
+      },
+      "summary": "* Thought leadership & change management\n* Drive development team agility via Scrum and DevOps approaches to software development\n* Coach group on applying MVP thinking, delivering incremental business value\n* Lead conversion rate optimisation for Melbourne IT web properties \n* Lead design of modern RESTful API to support Internal/B2B/B2C/App channels\n* Drive move from traditional web frameworks (Zend/PHP) to more performant Angular JS desktop & mobile applications",
+      "title": "Manager, Digital"
+    }]
+  },
+  "threePastPositions": {
+    "_total": 3,
+    "values": [
+      {
+        "company": {
+          "id": 9016,
+          "name": "Melbourne IT"
+        },
+        "endDate": {
+          "month": 11,
+          "year": 2013
+        },
+        "id": 416192733,
+        "isCurrent": false,
+        "startDate": {
+          "month": 7,
+          "year": 2013
+        },
+        "summary": "* Team leadership/management (Max team size 15)\n* Change management\n* Web architecture, Web API design & development\n* Led DevOps initiative in ITS Dev; includes transition to public/private cloud, continuous deployment, complete environment automation (puppet) + release automation and ChatOps\n* Iterative development using Scrum/Agile\n* Grow online channel revenue in close partnership with Business Unit. \"Fail-fast\" and learn quickly with metrics in Adobe Analytics (SiteCatalyst) with iterative development, agile processes and compartmentalised change\n* Promote developer-centric culture\n* Deliver custom B2C, B2B and B2B2C web portal for MIT Transformation programme ($1M+ budget)\n* Love Web",
+        "title": "Manager, Web Development"
+      },
+      {
+        "company": {
+          "id": 9016,
+          "name": "Melbourne IT"
+        },
+        "endDate": {
+          "month": 6,
+          "year": 2013
+        },
+        "id": 77110112,
+        "isCurrent": false,
+        "startDate": {
+          "month": 8,
+          "year": 2008
+        },
+        "summary": "* Introduced Agile Development (Scrum) & build automation to improve time to market, improve collaboration and reduce waste improving nr deployment rate > 500%\n* Introduced a fraud detection system > 2 weeks into online channel reducing fraud ~0% of online transaction, saving on charge-backs, domain name registries and manual labour\n* B2B, B2C and B2B2C systems support\n* New product launches into Online and Call Centre channels\n* Served as an SME and Tech Lead on Transformation Project, overseeing the Web stream\n* Lead offshore development initiative in Web arena\n* Introduced Enterprise CMS to reduce manual development\n* Development ambassador, pushing a development-centric culture. Introduction of Hack-days.",
+        "title": "Web Team Leader"
+      },
+      {
+        "company": {
+          "id": 3529478,
+          "name": "Jobs Find You Pty Ltd"
+        },
+        "endDate": {"year": 2012},
+        "id": 530690478,
+        "isCurrent": false,
+        "startDate": {"year": 2009},
+        "summary": "Developed B2C and B2B portals for the online resume platform.\nIntroduced initial monitization via Affiliate and advertiser program.\nAssisted with Strategic direction of company.",
+        "title": "Founding Director"
+      }
+    ]
+  }
+}

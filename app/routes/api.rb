@@ -3,18 +3,16 @@ require 'eventmachine'
 require 'em-websocket'
 require 'sinatra/reloader'
 require 'sinatra/param'
-require 'linkedin2resume/version'
 require "sinatra/json"
 require "json"
 require "sinatra-websocket"
-require "./app"
+
 #
 # Public: API for the Application
 #
 module Linkedin2Resume
   module Routes
       class API < Sinatra::Application
-        include Logging
         helpers Sinatra::Param
 
         configure do

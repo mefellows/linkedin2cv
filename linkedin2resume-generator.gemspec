@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.3"
+  spec.add_development_dependency "bundler"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
 
@@ -32,7 +32,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "sinatra-contrib"
   spec.add_runtime_dependency "sinatra-param"
   spec.add_runtime_dependency "eventmachine"
-  spec.add_runtime_dependency "em-websocket"
+  spec.add_runtime_dependency "em-websocket", '=0.3.6'
   spec.add_runtime_dependency "thin"
   spec.add_runtime_dependency "foreman"
   spec.add_runtime_dependency "dotenv"
@@ -41,4 +41,9 @@ Gem::Specification.new do |spec|
   # Specific App dependencies
   spec.add_runtime_dependency "linkedin-oauth2"
   spec.add_runtime_dependency "haml"
+  spec.add_runtime_dependency "asciidoctor"
+  spec.add_runtime_dependency "launchy"
+  spec.add_runtime_dependency "tilt"
+  # spec.add_development_dependency "pact"
+  spec.add_development_dependency "webmock"
 end

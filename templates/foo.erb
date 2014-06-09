@@ -1,0 +1,259 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classicthesis-Styled CV
+% LaTeX Template
+% Version 1.0 (22/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{scrartcl}
+
+\reversemarginpar % Move the margin to the left of the page
+
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+
+\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
+
+\newlength{\datebox}\settowidth{\datebox}{Spring 2011} % Set the width of the date box in each block
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cv}{\spacedallcaps{<%= profile.first_name %> <%= profile.last_name %>}}\vspace{1.5em} % Your name
+
+\noindent\spacedlowsmallcaps{Personal Information}\vspace{0.5em} % Personal information heading
+
+<% if !profile.location.name.nil? %>
+\NewEntry{}{\textit{Resides in <%= profile.location.name %>}} % Birthplace and date
+
+\NewEntry{email}{\href{mailto:<%= profile.email_address %>}{<%= profile.email_address %>}} % Email address
+
+<% end %>
+
+<% for @url in profile.member_url_resources.all %>
+\NewEntry{website}{\href{<%= @url.url %>}{<%= @url.url %>}} % Personal website
+
+<% end %>
+
+\NewEntry{phone}{(H) <%= home_phone %>\ \ $\cdotp$\ \ (M)<%= mobile_phone %>} % Phone number(s)
+
+\vspace{1em} % Extra white space between the personal information section and goal
+
+<% if !profile.summary.nil? %>
+\noindent\spacedlowsmallcaps{Introduction}\vspace{1em} % Goal heading, could be used for a quotation or short profile instead
+
+    <% for @blurb in profile.summary.split("\n") %>
+        <% if !@blurb.strip.empty? %>
+\Description{<%= @blurb %>}
+        <% end %>
+    <% end %>
+    \vspace{2em} % Goal text
+<% end %>
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Professional Experience}\vspace{1em}
+
+<% for @position in profile.positions.all %>
+    <% if @position.is_current %>
+        \NewEntry{<%=@position.start_date.year %>--Present}{<%= @position.title %>, \textsc{<%= @position.company.name %>}}
+    <% else %>
+        \NewEntry{<%=@position.start_date.year %>--<%=@position.end_date.year %>}{<%= @position.title %>, \textsc{<%= @position.company.name %>}}
+    <% end %>
+    \Description{\MarginText{<%= @position.company.name %>}
+    <% for @line in @position.summary.lines %>
+        <% if @line.match('\* ') %>
+            \begin{itemize}
+                \item <%= @line.gsub("\* ", '') %>
+            \end{itemize}
+        <% else %>
+            <%= @line %>
+        <% end %>
+    <% end %>
+
+Reference: Mark \textsc{Murphy}\ \ $\cdotp$\ \ +61 (3) 9628 1234\ \ $\cdotp$\ \ \href{mailto:mark.murphy@melbourneit.com.au}{mark.murphy@melbourneit.com.au}}
+
+%------------------------------------------------
+
+<% end %>
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Education}\vspace{1em}
+
+<% for @education in profile.educations.all %>
+
+    \NewEntry{<%=@education.start_date.year %>-<%=@education.end_date.year %>}{<%= @education.school_name %>}
+
+
+    <% if !@education.degree.nil? %>
+        \Description{\MarginText{<%=@education.degree %>}GPA: <%=@education.grade %>  \ $\cdotp$\ \ Field of study: <%=@education.field_of_study %>\newline
+    <% else %>
+        \Description{\MarginText{High School}
+    <% end %>
+
+    <% if !@education.activities.nil? %>
+        <% for @line in @education.activities.lines %>
+            <% if @line.match('\* ') %>
+                \begin{itemize}
+                \item <%= @line.gsub("\* ", '') %>
+                \end{itemize}
+            <% else %>
+                <%= @line %>
+            <% end %>
+
+        <% end %>
+    <% end %>
+
+    <% if !@education.description.nil? %>
+        <% for @line in @education.description.lines %>
+            <% if @line.match('\* ') %>
+                \begin{itemize}
+                \item <%= @line.gsub("\* ", '') %>
+                \end{itemize}
+            <% else %>
+                <%= @line %>
+            <% end %>
+
+        <% end %>
+    <% end %>}
+<% end %>
+
+
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+%\spacedlowsmallcaps{Publications}\vspace{1em}
+
+%\NewEntry{January 2013}{Publication Title}
+
+%\Description{\MarginText{Full Journal Name}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nisl tellus, sodales non pulvinar in, adipiscing sit amet purus. Suspendisse sed facilisis diam. Sed ornare sem nec justo adipiscing nec venenatis lectus commodo. Mauris non neque ligula. Pellentesque sed quam eu felis iaculis iaculis ac a leo. Suspendisse neque neque, placerat id adipiscing et, elementum eu sem.\\ Authors: John \textsc{Smith}, ~James \textsc{Smith}}
+
+%------------------------------------------------
+
+%\NewEntry{Sept. 2012}{Publication Title}
+
+%\Description{\MarginText{Full Journal Name}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nisl tellus, sodales non pulvinar in, adipiscing sit amet purus. Suspendisse sed facilisis diam. Sed ornare sem nec justo adipiscing nec venenatis lectus commodo. Mauris non neque ligula. Pellentesque sed quam eu felis iaculis iaculis ac a leo. Suspendisse neque neque, placerat id adipiscing et, elementum eu sem.\\ Authors: John \textsc{Smith}, ~James \textsc{Smith}}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Expertise \textbackslash Skills}\vspace{1em}
+
+\Description{\MarginText{Technical}
+<% for @skill in profile.skills.all.shift(10) %>
+    %\textsc{<%=@skill.skill.name%>}
+    <%=@skill.skill.name%>,
+<% end %>}
+
+
+%\Description{\MarginText{Technical}\textsc{java}}
+
+%\Description{\MarginText{Languages}\textsc{java}, Adobe Illustrator}
+
+%\Description{\MarginText{Non-Technical}\textsc{python}, \textsc{html}, \LaTeX, OpenOffice, Linux, Microsoft Windows}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	OTHER INFORMATION
+%----------------------------------------------------------------------------------------
+
+%\spacedlowsmallcaps{Other Information}\vspace{1em}
+
+%\Description{\MarginText{Awards}2011\ \ $\cdotp$\ \ School of Business Postgraduate Scholarship}
+
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+%\Description{2010\ \ $\cdotp$\ \ Top Achiever Award -- Commerce}
+
+%------------------------------------------------
+
+%\vspace{1em}
+
+%\Description{\MarginText{Communication Skills}2010\ \ $\cdotp$\ \ Oral Presentation at the California Business Conference}
+
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+%\Description{2009\ \ $\cdotp$\ \ Poster at the Annual Business Conference in Oregon}
+
+%------------------------------------------------
+
+%\vspace{1em}
+
+%\newlength{\langbox} % Create a new length for the length of languages to keep them equally spaced
+%\settowidth{\langbox}{English} % Length equals the length of "English" - if you have a longer language in your list put it here
+
+%\Description{\MarginText{Languages}\parbox{\langbox}{\textsc{English}}\ \ $\cdotp$\ \ \ Mothertongue}
+
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+%\Description{\parbox{\langbox}{\textsc{Spanish}}\ \ $\cdotp$\ \ \ Intermediate (conversationally fluent)}
+
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+%\Description{\parbox{\langbox}{\textsc{Dutch}}\ \ $\cdotp$\ \ \ Basic (simple words and phrases only)}
+
+%\vspace{1em} % Negative vertical space to counteract the vertical space between every \Description command
+
+%------------------------------------------------
+
+%\Description{\MarginText{Interests}Piano\ \ $\cdotp$\ \ Cooking\ \ $\cdotp$\ \ Running\ \ $\cdotp$\ \ Chess\ \ $\cdotp$\ \ Dancing}
+
+\Description{\MarginText{Interests}<%= profile.interests.gsub(',', '\\\ \\\ $\\\cdotp$\\\ \\\ ') %>}
+
+%----------------------------------------------------------------------------------------
+
+\end{cv}
+
+\end{document}

@@ -1,20 +1,19 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
 require 'sinatra/param'
-require 'linkedin2resume/version'
-require 'linkedin2resume/logging'
 require 'haml'
 require 'linkedin-oauth2'
+
 #
 # Public: Front end API for the Linkedin2Resume Generator website
 #
 module Linkedin2Resume
   module Routes
     class Web < Sinatra::Application
-      include Logging
+      # include Logging
       use Rack::Logger
 
-      configure :development do
+      configure do
         set :views, 'app/views'
         set :public_folder, 'public/dist'
         set :sessions, true
@@ -22,6 +21,11 @@ module Linkedin2Resume
         set :secret, ENV["LINKEDIN_API_SECRET"]
         set :session_secret, 'd41d8cd98f00b204e9800998ecf8427e'
         set :logging, true
+        set :server, 'thin'
+        set :port, 5000
+
+        # Would like to pass as option for CLI to set false, but true otherwise
+        set :threaded, false # This allows sneaky thread manipulation
       end
 
       # configure :production do
@@ -71,7 +75,7 @@ module Linkedin2Resume
       #
       #
       get "/cli/auth" do
-        ENV['CLI_ONLY'] = true
+        ENV['CLI_ONLY'] = 'true'
         redirect "/auth"
       end
 
@@ -96,12 +100,17 @@ module Linkedin2Resume
         session[:atoken] = token.token
 
         # Store in env for command line!
-        ENV['LINKEDIN_OAUTH2_ACCESS_TOKEN'] = token.token
-        logger.info "Got access token, shutting down!: #{session[:atoken]}"
+        file = File.new('.token', 'w')
+        file.write(token.token)
+        file.close
 
         if !ENV['CLI_ONLY'].nil?
-          exit!
+          logger.info "Got access token, shutting down!: #{session[:atoken]}"
+          # exit!
+          Thread.current.thread_variable_set('access_token', token.token)
+          Thread.kill(Thread.current)
         end
+
       end
 
       #
