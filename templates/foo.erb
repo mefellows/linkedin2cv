@@ -80,7 +80,6 @@
     \vspace{2em} % Goal text
 <% end %>
 
-
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE
 %----------------------------------------------------------------------------------------
@@ -97,14 +96,42 @@
     <% for @line in @position.summary.lines %>
         <% if @line.match('\* ') %>
             \begin{itemize}
-                \item <%= @line.gsub("\* ", '') %>
+            \item <%= @line.gsub("\* ", '') %>
             \end{itemize}
         <% else %>
             <%= @line %>
         <% end %>
     <% end %>
 
-Reference: Mark \textsc{Murphy}\ \ $\cdotp$\ \ +61 (3) 9628 1234\ \ $\cdotp$\ \ \href{mailto:mark.murphy@melbourneit.com.au}{mark.murphy@melbourneit.com.au}}
+    Reference: Mark \textsc{Murphy}\ \ $\cdotp$\ \ +61 (3) 9628 1234\ \ $\cdotp$\ \ \href{mailto:mark.murphy@melbourneit.com.au}{mark.murphy@melbourneit.com.au}}
+
+    %------------------------------------------------
+
+<% end %>
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Projects}\vspace{1em}
+
+<% for @project in profile.projects.all %>
+    <% if @project.url %>
+        \NewEntry{website}{\href{<%= @project.url %>}{<%= @project.url %>}} % Project website
+    <% end %>
+    \NewEntry{<%= @project.name %>, \textsc{Melbourne IT}}
+    \Description{
+    <% for @line in @project.description.lines %>
+        <% if @line.match('\* ') %>
+            \begin{itemize}
+                \item <%= @line.gsub("\* ", '') %>
+            \end{itemize}
+        <% else %>
+            <%= @line %>
+        <% end %>
+    <% end %>}
+
+Reference: Mark \textsc{Murphy}\ \ $\cdotp$\ \ +61 (3) 9628 1234\ \ $\cdotp$\ \ \href{mailto:mark.murphy@melbourneit.com.au}{mark.murphy@melbourneit.com.au}
 
 %------------------------------------------------
 
@@ -155,8 +182,6 @@ Reference: Mark \textsc{Murphy}\ \ $\cdotp$\ \ +61 (3) 9628 1234\ \ $\cdotp$\ \ 
         <% end %>
     <% end %>}
 <% end %>
-
-
 
 %------------------------------------------------
 

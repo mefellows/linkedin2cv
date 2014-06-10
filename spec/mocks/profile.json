@@ -42,7 +42,6 @@
         "endDate": {"year": 2007},
         "fieldOfStudy": "Computer Science, Psychology, Usability",
         "id": 8579699,
-        "grade": "A",
         "schoolName": "La Trobe University",
         "startDate": {"year": 2003}
       },
@@ -154,7 +153,7 @@
       }
     ]
   },
-  "lastModifiedTimestamp": 1179849865000,
+  "lastModifiedTimestamp": 1402327884267,
   "lastName": "Fellows",
   "location": {
     "country": {"code": "au"},
@@ -184,7 +183,11 @@
       {
         "company": {
           "id": 9016,
-          "name": "Melbourne IT"
+          "industry": "Internet",
+          "name": "Melbourne IT",
+          "size": "201-500 employees",
+          "ticker": "MLB",
+          "type": "Public Company"
         },
         "id": 522866547,
         "isCurrent": true,
@@ -198,7 +201,11 @@
       {
         "company": {
           "id": 9016,
-          "name": "Melbourne IT"
+          "industry": "Internet",
+          "name": "Melbourne IT",
+          "size": "201-500 employees",
+          "ticker": "MLB",
+          "type": "Public Company"
         },
         "endDate": {
           "month": 11,
@@ -216,7 +223,11 @@
       {
         "company": {
           "id": 9016,
-          "name": "Melbourne IT"
+          "industry": "Internet",
+          "name": "Melbourne IT",
+          "size": "201-500 employees",
+          "ticker": "MLB",
+          "type": "Public Company"
         },
         "endDate": {
           "month": 6,
@@ -234,7 +245,10 @@
       {
         "company": {
           "id": 3529478,
-          "name": "Jobs Find You Pty Ltd"
+          "industry": "Human Resources",
+          "name": "Jobs Find You Pty Ltd",
+          "size": "1-10 employees",
+          "type": "Privately Held"
         },
         "endDate": {"year": 2012},
         "id": 530690478,
@@ -246,7 +260,10 @@
       {
         "company": {
           "id": 9016,
-          "name": "Melbourne IT"
+          "industry": "Information Technology and Services",
+          "name": "Melbourne IT",
+          "ticker": "MLB",
+          "type": "Public Company"
         },
         "endDate": {
           "month": 8,
@@ -264,7 +281,11 @@
       {
         "company": {
           "id": 2677,
-          "name": "McDonald's"
+          "industry": "Restaurants",
+          "name": "McDonald's",
+          "size": "51-200 employees",
+          "ticker": "MCD",
+          "type": "Public Company"
         },
         "endDate": {
           "month": 2,
@@ -278,6 +299,32 @@
         },
         "summary": "* Budgets and labour forecasting\n* Stock inventoring\n* Team management & leadership\n* Management training\n* Made delicious hamburgers",
         "title": "Manager"
+      }
+    ]
+  },
+  "projects": {
+    "_total": 4,
+    "values": [
+      {
+        "description": "The transformation programme is an IT integration and business transformation project brought about primarily to standardise business functions & processes, and to consolidate core customer information into a single system. This would enable Melbourne IT to more efficiently manage its customers, improve service offerings and \n\nI have served in a Solution Architect type role around the Web Properties integration piece which forms the all-important pointy part of the value chain \u2013 the direct interaction between Melbourne IT and its customers.\n\nMy involvement in the project to date has included the following:\n* Acting as a Subject Matter Expert (SME), providing advice on scoping and preparing the Web sub-project\u2019s business requirements\n* High-level design for integrating existing websites, service portals, the new Oracle suite and our existing legacy systems\n* Technical lead, including mid-level and detailed designs for the implementation of 5 sub-streams.",
+        "id": 25,
+        "name": "Business Transformation Programme (IWS)",
+        "url": "http://www.webcentral.com.au/order/"
+      },
+      {
+        "description": "Part of an ongoing initiative to re-align the technical and business support platforms that will underpin Melbourne ITs future growth strategies, including M&A activities.\n\nIn 1 year, Melbourne IT was able to deliver Oracle Siebel, BRM, Fusion (AIA) and OBIEE and a fully integrated, custom Web solution tailored to Melbourne IT's domain name oriented business via a custom integration API.\n\nI was responsible for the technical delivery of the following streams of work, run as Agile projects and a budget of over $1M:\n\n- eCommerce (shop) website \n- Customer Self-Service portal\n- Identity and Access Management (IAM) system\n- Provisioning Fallout Interfaces\n- Design of JSON-based, RESTful API abstracting the new Oracle Business Support Systems (above) enabling internal and external clients a modern integration point (delivered by solution partner Rubicon Red)\n\nAchievements:\n\n- Delivered on-time and within budget\n- A better platform for our customers, newer products, automated provisioning\n- Only mobile/tablet optimised Account console in our industry\n- Increased Net Promoter Score (customer satisfaction)",
+        "id": 67,
+        "name": "Transformation"
+      },
+      {
+        "description": "Part of an E2E solution that delivered industries highest auto-renewal rates for domain names (> 80%)\n\n* UX implementation and careful interaction design played critical role in opting in more customers and reduction in opt-out\n* Worked with talented Marketing group on communications (on/offline)",
+        "id": 115,
+        "name": "Auto-renewal"
+      },
+      {
+        "description": "2013\n* Conversion rate optimisation of online Renewing customers\n* Significantly increased MRR via attachment rates\n* Collaborated with Marketing / Product to deliver integrated experience\n* Delivered using offshore resources (resource constrained due to Transformation)\n* Positive growth in 2013, first time during Transformation programme\n\n2014\n* Improving speed/performance (move to cloud and new technology)\n* Refreshing UX for design consistency & aesthetics\n* Significant new product launches",
+        "id": 117,
+        "name": "Renewal - Conversion Rate Optimisation"
       }
     ]
   },
@@ -376,187 +423,187 @@
     "_total": 46,
     "values": [
       {
-        "id": 69,
+        "id": 120,
         "skill": {"name": "Change Management"}
       },
       {
-        "id": 70,
-        "skill": {"name": "conversion rate optimization"}
-      },
-      {
-        "id": 71,
-        "skill": {"name": "Agile Methodologies"}
-      },
-      {
-        "id": 72,
-        "skill": {"name": "Web Development"}
-      },
-      {
-        "id": 73,
-        "skill": {"name": "APIs"}
-      },
-      {
-        "id": 74,
-        "skill": {"name": "E-commerce"}
-      },
-      {
-        "id": 75,
-        "skill": {"name": "HTML 5"}
-      },
-      {
-        "id": 76,
-        "skill": {"name": "Web Applications"}
-      },
-      {
-        "id": 77,
-        "skill": {"name": "Agile Project Management"}
-      },
-      {
-        "id": 78,
-        "skill": {"name": "Continuous Delivery"}
-      },
-      {
-        "id": 79,
+        "id": 121,
         "skill": {"name": "DevOps"}
       },
       {
-        "id": 80,
+        "id": 122,
+        "skill": {"name": "Agile Methodologies"}
+      },
+      {
+        "id": 123,
+        "skill": {"name": "Web Development"}
+      },
+      {
+        "id": 124,
+        "skill": {"name": "APIs"}
+      },
+      {
+        "id": 125,
+        "skill": {"name": "E-commerce"}
+      },
+      {
+        "id": 126,
+        "skill": {"name": "HTML 5"}
+      },
+      {
+        "id": 127,
+        "skill": {"name": "Web Applications"}
+      },
+      {
+        "id": 128,
+        "skill": {"name": "Agile Project Management"}
+      },
+      {
+        "id": 129,
+        "skill": {"name": "Continuous Delivery"}
+      },
+      {
+        "id": 130,
         "skill": {"name": "Web Architecture"}
       },
       {
-        "id": 81,
+        "id": 131,
         "skill": {"name": "Solution Architecture"}
       },
       {
-        "id": 82,
+        "id": 132,
         "skill": {"name": "Team Leadership"}
       },
       {
-        "id": 83,
+        "id": 133,
         "skill": {"name": "Cloud Computing"}
       },
       {
-        "id": 84,
-        "skill": {"name": "Web Analytics"}
-      },
-      {
-        "id": 85,
+        "id": 134,
         "skill": {"name": "Automation"}
       },
       {
-        "id": 86,
+        "id": 135,
+        "skill": {"name": "conversion rate optimization"}
+      },
+      {
+        "id": 136,
+        "skill": {"name": "Web Analytics"}
+      },
+      {
+        "id": 137,
         "skill": {"name": "Management"}
       },
       {
-        "id": 87,
+        "id": 138,
         "skill": {"name": "Web Services"}
       },
       {
-        "id": 88,
+        "id": 139,
         "skill": {"name": "Apache"}
       },
       {
-        "id": 89,
+        "id": 140,
         "skill": {"name": "Java"}
       },
       {
-        "id": 90,
+        "id": 141,
         "skill": {"name": "SEO"}
       },
       {
-        "id": 91,
+        "id": 142,
         "skill": {"name": "Zend Framework"}
       },
       {
-        "id": 92,
+        "id": 143,
         "skill": {"name": "Web Project Management"}
       },
       {
-        "id": 93,
+        "id": 144,
         "skill": {"name": "Mobile Devices"}
       },
       {
-        "id": 94,
+        "id": 145,
         "skill": {"name": "User Interface Design"}
       },
       {
-        "id": 95,
+        "id": 146,
         "skill": {"name": "JavaScript"}
       },
       {
-        "id": 96,
+        "id": 147,
         "skill": {"name": "CSS"}
       },
       {
-        "id": 97,
+        "id": 148,
         "skill": {"name": "Java Enterprise Edition"}
       },
       {
-        "id": 98,
+        "id": 149,
         "skill": {"name": "Spring"}
       },
       {
-        "id": 99,
+        "id": 150,
         "skill": {"name": "User Experience"}
       },
       {
-        "id": 100,
+        "id": 151,
         "skill": {"name": "Mobile Applications"}
       },
       {
-        "id": 101,
+        "id": 152,
         "skill": {"name": "jQuery"}
       },
       {
-        "id": 102,
+        "id": 153,
         "skill": {"name": "Information Architecture"}
       },
       {
-        "id": 103,
+        "id": 154,
         "skill": {"name": "Google Analytics"}
       },
       {
-        "id": 104,
+        "id": 155,
         "skill": {"name": "MySQL"}
       },
       {
-        "id": 105,
+        "id": 156,
         "skill": {"name": "MVC"}
       },
       {
-        "id": 106,
+        "id": 157,
         "skill": {"name": "Git"}
       },
       {
-        "id": 107,
+        "id": 158,
         "skill": {"name": "OSGi"}
       },
       {
-        "id": 108,
+        "id": 159,
         "skill": {"name": "JSON"}
       },
       {
-        "id": 109,
+        "id": 160,
         "skill": {"name": "Analytics"}
       },
       {
-        "id": 110,
+        "id": 161,
         "skill": {"name": "AJAX"}
       },
       {
-        "id": 111,
+        "id": 162,
         "skill": {"name": "JIRA"}
       },
       {
-        "id": 112,
+        "id": 163,
         "skill": {"name": "PHP"}
       },
       {
-        "id": 113,
+        "id": 164,
         "skill": {"name": "Puppet"}
       },
       {
-        "id": 114,
+        "id": 165,
         "skill": {"name": "CMS"}
       }
     ]
@@ -603,8 +650,8 @@
           "name": "UNION / Digital"
         },
         {
-          "id": 1099112,
-          "name": "Destination Melbourne"
+          "id": 125382,
+          "name": "specialmoves"
         }
       ]
     },
@@ -618,7 +665,11 @@
     "values": [{
       "company": {
         "id": 9016,
-        "name": "Melbourne IT"
+        "industry": "Internet",
+        "name": "Melbourne IT",
+        "size": "201-500 employees",
+        "ticker": "MLB",
+        "type": "Public Company"
       },
       "id": 522866547,
       "isCurrent": true,
@@ -636,7 +687,11 @@
       {
         "company": {
           "id": 9016,
-          "name": "Melbourne IT"
+          "industry": "Internet",
+          "name": "Melbourne IT",
+          "size": "201-500 employees",
+          "ticker": "MLB",
+          "type": "Public Company"
         },
         "endDate": {
           "month": 11,
@@ -654,7 +709,11 @@
       {
         "company": {
           "id": 9016,
-          "name": "Melbourne IT"
+          "industry": "Internet",
+          "name": "Melbourne IT",
+          "size": "201-500 employees",
+          "ticker": "MLB",
+          "type": "Public Company"
         },
         "endDate": {
           "month": 6,
@@ -672,7 +731,10 @@
       {
         "company": {
           "id": 3529478,
-          "name": "Jobs Find You Pty Ltd"
+          "industry": "Human Resources",
+          "name": "Jobs Find You Pty Ltd",
+          "size": "1-10 employees",
+          "type": "Privately Held"
         },
         "endDate": {"year": 2012},
         "id": 530690478,
