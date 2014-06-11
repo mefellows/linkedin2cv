@@ -9,6 +9,8 @@ describe Linkedin2Resume::Converter do
   before do
     @client = Linkedin2Resume::Converter.new
     @profile = @client.get_profile
+    @config = YAML.load_file(__dir__ + "/mocks/config.yml")
+
   end
 
   it 'Should Fetch skills' do
@@ -43,14 +45,9 @@ describe Linkedin2Resume::Converter do
 
   it 'Should Fetch current jobs' do
     expect(@profile.three_current_positions).to be_an_instance_of(LinkedIn::Mash)
-
-    @profile.three_current_positions.all.map do |k|
-      puts k.company.name
-    end
   end
 
   it 'Should Fetch past jobs' do
-    puts @profile.three_current_positions.all.concat(@profile.three_past_positions.all)
     expect(@profile.three_past_positions).to be_an_instance_of(LinkedIn::Mash)
   end
 
@@ -59,59 +56,13 @@ describe Linkedin2Resume::Converter do
   end
 
   it 'Should compile latex on the CLI' do
-    str1 = "foo bar & "
-    str = str1.sub(/(?<!\\)&/, '\\\&')
-    puts str
-    expect(str).to eql("foo bar \\\& ")
 
-        foo = [{
-            "id"=>69,
-            "skill"=>{"name"=>"Change Management"}
-        },
-        {
-            "id"=>70,
-            "skill"=>{"name"=>"conversion rate optimization"}
-        },
-        {
-            "id"=>71,
-            "skill"=>{"name"=>"Agile Methodologies"}
-        },
-        {
-            "id"=>72,
-            "skill"=>{"name"=>"Web Development"}
-        },
-        {
-            "id"=>73,
-            "skill"=>{"name"=>"APIs"}
-        },
-        {
-            "id"=>74,
-            "skill"=>{"name"=>"E-commerce"}
-        },
-        {
-            "id"=>75,
-            "skill"=>{"name"=>"HTML 5"}
-        },
-        {
-            "id"=>76,
-            "skill"=>{"name"=>"Web Applications"}
-        },
-        {
-            "id"=>77,
-            "skill"=>{"name"=>"Agile Project Management"}
-        }]
-
-    # items = foo.map do |item|
-    #   "\textsc{#{item['skill']['name']}"
-    # end
-    items = foo.map do |item|
-      "\textsc{#{item['skill']['name']}"
-    end
-    puts items.join(', ')
   end
 
 
   it 'Should create a latex Resume' do
-    @client.create_resume
+
+    puts @config
+    @client.create_resume(@config)
   end
 end

@@ -153,19 +153,15 @@
       }
     ]
   },
-  "lastModifiedTimestamp": 1402327884267,
+  "lastModifiedTimestamp": 1402486661398,
   "lastName": "Fellows",
   "location": {
     "country": {"code": "au"},
     "name": "Melbourne, Australia"
   },
   "memberUrlResources": {
-    "_total": 2,
+    "_total": 1,
     "values": [
-      {
-        "name": "Company Website",
-        "url": "http://www.melbourneit.com.au"
-      },
       {
         "name": "Personal Website",
         "url": "http://www.onegeek.com.au"
@@ -173,12 +169,12 @@
     ]
   },
   "mfeedRssUrl": "http://www.linkedin.com/rss/mefeed?key=qDNK_YloNKBf9dbWmw17l_wFbl9MGyECGnM1kYpTrUuvt7F6t-OhQlPzHUHplVt",
-  "numConnections": 435,
+  "numConnections": 434,
   "numConnectionsCapped": false,
   "numRecommenders": 3,
   "pictureUrl": "http://m.c.lnkd.licdn.com/mpr/mprx/0_4dB698eI8kV8WU0PZ7kM9GjIhG0CIgfPVH_M9GRc03ItqJ41NfboZC7JaExgesaxJov4J5WC-5ep",
   "positions": {
-    "_total": 6,
+    "_total": 7,
     "values": [
       {
         "company": {
@@ -197,6 +193,20 @@
         },
         "summary": "* Thought leadership & change management\n* Drive development team agility via Scrum and DevOps approaches to software development\n* Coach group on applying MVP thinking, delivering incremental business value\n* Lead conversion rate optimisation for Melbourne IT web properties \n* Lead design of modern RESTful API to support Internal/B2B/B2C/App channels\n* Drive move from traditional web frameworks (Zend/PHP) to more performant Angular JS desktop & mobile applications",
         "title": "Manager, Digital"
+      },
+      {
+        "company": {
+          "industry": "Information Technology and Services",
+          "name": "OneGeek"
+        },
+        "id": 549327750,
+        "isCurrent": true,
+        "startDate": {
+          "month": 1,
+          "year": 2007
+        },
+        "summary": "* Freelance Web Application development\n* Development of JobsFindYou portal (startup)\n* Open Source development (GitHub)",
+        "title": "Freelance Web Developer"
       },
       {
         "company": {
@@ -239,7 +249,7 @@
           "month": 8,
           "year": 2008
         },
-        "summary": "* Introduced Agile Development (Scrum) & build automation to improve time to market, improve collaboration and reduce waste improving nr deployment rate > 500%\n* Introduced a fraud detection system > 2 weeks into online channel reducing fraud ~0% of online transaction, saving on charge-backs, domain name registries and manual labour\n* B2B, B2C and B2B2C systems support\n* New product launches into Online and Call Centre channels\n* Served as an SME and Tech Lead on Transformation Project, overseeing the Web stream\n* Lead offshore development initiative in Web arena\n* Introduced Enterprise CMS to reduce manual development\n* Development ambassador, pushing a development-centric culture. Introduction of Hack-days.",
+        "summary": "* Introduced Agile Development (Scrum) & build automation to improve time to market, improve collaboration and reduce waste improving nr deployment rate > 500\\%\n* Introduced a fraud detection system > 2 weeks into online channel reducing fraud to \\textasciitilde0\\% of online transaction, saving on charge-backs, domain name registries and manual labour\n* B2B, B2C and B2B2C systems support\n* New product launches into Online and Call Centre channels\n* Served as an SME and Tech Lead on Transformation Project, overseeing the Web stream\n* Lead offshore development initiative in Web arena\n* Introduced Enterprise CMS to reduce manual development\n* Development ambassador, pushing a development-centric culture. Introduction of Hack-days.",
         "title": "Web Team Leader"
       },
       {
@@ -254,7 +264,7 @@
         "id": 530690478,
         "isCurrent": false,
         "startDate": {"year": 2009},
-        "summary": "Developed B2C and B2B portals for the online resume platform.\nIntroduced initial monitization via Affiliate and advertiser program.\nAssisted with Strategic direction of company.",
+        "summary": "* Developed B2C and B2B portals for the online resume platform.\n* Introduced initial monitization via Affiliate and advertiser program.\n* Assisted with Strategic direction of company.",
         "title": "Founding Director"
       },
       {
@@ -303,28 +313,90 @@
     ]
   },
   "projects": {
-    "_total": 4,
+    "_total": 7,
     "values": [
       {
-        "description": "The transformation programme is an IT integration and business transformation project brought about primarily to standardise business functions & processes, and to consolidate core customer information into a single system. This would enable Melbourne IT to more efficiently manage its customers, improve service offerings and \n\nI have served in a Solution Architect type role around the Web Properties integration piece which forms the all-important pointy part of the value chain \u2013 the direct interaction between Melbourne IT and its customers.\n\nMy involvement in the project to date has included the following:\n* Acting as a Subject Matter Expert (SME), providing advice on scoping and preparing the Web sub-project\u2019s business requirements\n* High-level design for integrating existing websites, service portals, the new Oracle suite and our existing legacy systems\n* Technical lead, including mid-level and detailed designs for the implementation of 5 sub-streams.",
-        "id": 25,
-        "name": "Business Transformation Programme (IWS)",
-        "url": "http://www.webcentral.com.au/order/"
+        "description": "Led a staged migration of the Melbourne IT Web platforms from existing internal, physical Solaris infrastructure to commodity Intel environment running RHEL.\n\nSummary:\n\n   * Scope: Migration of MIT website and subsystems, including eCommerce, Renewal, Self-Service and CMS Managed legacy components tied heavily to existing environments\n\n   * Deployment automation of complex environment via internally built engine (project Godspeed) and distributed RPM packages\n\n   * Re-architected to suit HA environment, including a layer 7 reverse proxy (Nginx) for performance, security and flexibility in configuration with the services that comprise the overall web platform\n\n   * Revised DR strategy for existing integrated internal systems\n\n   * Implementation of major infra-as-code principles and leveraging as Puppet, Jenkins CI and Git as core components\n\n   * Integration with a centralised sys-logging platform and Splunk data sink\n   * Focus on increased use and reliance monitoring and reporting tools for proactive system health, including Graphite, NewRelic, Sentry, Splunk and Nagios.\n\n   * Close collaboration with Operations team to ensure \n\nKey successes: \n\n   * Increased conversion, cross-product attachment & engagement rates\n   * Avg. deployment time reduced from 1 hour to less than 15 mins\n\n   * Decrease in page loading times between 30-50\\%\n\n   * Significant reduction in website error rate\n\n   * Increase in website Apdex \\ NPS\n\n   * Shifted Web Dev and Operations working paradigm to a more open, collaborative and proactive partnership\n",
+        "id": 167,
+        "name": "Melbourne IT AWS Migration \\ \"DevOps\"",
+        "startDate": {
+          "month": 2,
+          "year": 2013
+        },
+        "url": "http://www.melbourneit.com.au"
+      },
+      {
+        "description": "Currently working with a startup to implement a disruptive mobile application prototype in the Marketing / Advertising space. The business details cannot be disclosed at this time, however I am working as a Solution Architect and also a Developer to the client as there are a number of parties required to deliver the project and requires technical coordination.\n\nTechnical Summary:\n\n   * Scala based application including RESTful API\n   * Utilization of both SQL & NoSQL databases for specific requirements, including transactional and large file storage/retrieval\n   * AngularJS front end using Iconic library (PhoneGap/Cordova) for mobile app deployment\n   * Integration with external systems\n   * Initial deployment to a cloud environment (Heroku, AWS etc.)\n",
+        "id": 169,
+        "name": "Startup - Mobile App (Advertising)",
+        "startDate": {
+          "month": 4,
+          "year": 2014
+        }
+      },
+      {
+        "description": "Summary:\n\n   * Major redesign of flagship Melbourne IT website (www.melbourneit.com.au)\n   * Goal to reduce web foot print and time-to-market\n   * Adoption of AngularJS as the main UI framework\n   * Staged weight loss strategy from existing PHP/Java frameworks into Restful, API driven UIs \n\nKey Successes:\n\n   * Achieved sub 1-second domain search (fastest of all major competitors)\n   * Increased domain search engagement\n   * Increased domain name conversion rates\n   * Deployment of RESTful API (Migration from legacy SOAP/RPC services)",
+        "id": 171,
+        "name": "Melbourne IT Website Refresh (In Progress)",
+        "startDate": {
+          "month": 3,
+          "year": 2014
+        },
+        "url": "http://www.melbourneit.com.au"
       },
       {
         "description": "Part of an ongoing initiative to re-align the technical and business support platforms that will underpin Melbourne ITs future growth strategies, including M&A activities.\n\nIn 1 year, Melbourne IT was able to deliver Oracle Siebel, BRM, Fusion (AIA) and OBIEE and a fully integrated, custom Web solution tailored to Melbourne IT's domain name oriented business via a custom integration API.\n\nI was responsible for the technical delivery of the following streams of work, run as Agile projects and a budget of over $1M:\n\n- eCommerce (shop) website \n- Customer Self-Service portal\n- Identity and Access Management (IAM) system\n- Provisioning Fallout Interfaces\n- Design of JSON-based, RESTful API abstracting the new Oracle Business Support Systems (above) enabling internal and external clients a modern integration point (delivered by solution partner Rubicon Red)\n\nAchievements:\n\n- Delivered on-time and within budget\n- A better platform for our customers, newer products, automated provisioning\n- Only mobile/tablet optimised Account console in our industry\n- Increased Net Promoter Score (customer satisfaction)",
+        "endDate": {
+          "month": 12,
+          "year": 2013
+        },
         "id": 67,
-        "name": "Transformation"
+        "name": "Transformation",
+        "startDate": {
+          "month": 12,
+          "year": 2012
+        }
       },
       {
-        "description": "Part of an E2E solution that delivered industries highest auto-renewal rates for domain names (> 80%)\n\n* UX implementation and careful interaction design played critical role in opting in more customers and reduction in opt-out\n* Worked with talented Marketing group on communications (on/offline)",
-        "id": 115,
-        "name": "Auto-renewal"
-      },
-      {
-        "description": "2013\n* Conversion rate optimisation of online Renewing customers\n* Significantly increased MRR via attachment rates\n* Collaborated with Marketing / Product to deliver integrated experience\n* Delivered using offshore resources (resource constrained due to Transformation)\n* Positive growth in 2013, first time during Transformation programme\n\n2014\n* Improving speed/performance (move to cloud and new technology)\n* Refreshing UX for design consistency & aesthetics\n* Significant new product launches",
+        "description": "2013\n* Conversion rate optimisation of online Renewing customers\n* Significantly increased MRR via attachment rates\n* Collaborated with Marketing / Product to deliver integrated experience\n* Delivered using offshore resources (resource constrained due to Transformation)\n* Positive growth in 2013, first time during Transformation programme\n\n2014\n* Improving speed/performance (move to cloud and new technology)\n* Refreshing UX for design consistency & aesthetics\n* Significant new product launches\n* Increased NPS score\n* Added mobile/tablet responsive design\n* Achieved 16\\% conversion rate lift from previous conversion base levels.",
+        "endDate": {
+          "month": 6,
+          "year": 2014
+        },
         "id": 117,
-        "name": "Renewal - Conversion Rate Optimisation"
+        "name": "Renewal - Conversion Rate Optimisation",
+        "startDate": {
+          "month": 7,
+          "year": 2013
+        },
+        "url": "http://renew.melbourneit.com.au"
+      },
+      {
+        "description": "Part of an E2E solution that delivered industries highest auto-renewal rates for domain names (> 80\\%)\n\n* UX implementation and careful interaction design played critical role in opting in more customers and reduction in opt-out\n* Worked with talented Marketing group on communications (on/offline)",
+        "endDate": {
+          "month": 3,
+          "year": 2013
+        },
+        "id": 115,
+        "name": "Auto-renewal",
+        "startDate": {
+          "month": 1,
+          "year": 2013
+        }
+      },
+      {
+        "description": "The transformation programme is an IT integration and business transformation project brought about primarily to standardise business functions & processes, and to consolidate core customer information into a single system. This would enable Melbourne IT to more efficiently manage its customers, improve service offerings and \n\nI have served in a Solution Architect type role around the Web Properties integration piece which forms the all-important pointy part of the value chain \u2013 the direct interaction between Melbourne IT and its customers.\n\nMy involvement in the project to date has included the following:\n* Acting as a Subject Matter Expert (SME), providing advice on scoping and preparing the Web sub-project's business requirements\n* High-level design for integrating existing websites, service portals, the new Oracle suite and our existing legacy systems\n* Technical lead, including mid-level and detailed designs for the implementation of 5 sub-streams.",
+        "endDate": {
+          "month": 11,
+          "year": 2012
+        },
+        "id": 25,
+        "name": "Business Transformation Programme (IWS)",
+        "startDate": {
+          "month": 1,
+          "year": 2010
+        },
+        "url": "http://www.webcentral.com.au/order/"
       }
     ]
   },
@@ -650,8 +722,8 @@
           "name": "UNION / Digital"
         },
         {
-          "id": 125382,
-          "name": "specialmoves"
+          "id": 1099112,
+          "name": "Destination Melbourne"
         }
       ]
     },
@@ -661,25 +733,41 @@
   }},
   "summary": "Experienced Development Thought Leader with over 8 commercial years delivering eCommerce Web Applications. Strong online B2C, B2B and API capability with some conversion rate optimisation experience.\n\nI'm an adaptive leader, and challenge teams to think differently about software delivery; no one approach or technology works in all situations. Agile and DevOps are just labels, it's how you approach software delivery that really matters.\n\nYou'll find me hacking on GitHub in my spare time in Ruby, Scala & Angular, and have 8+ years experience in Java, PHP, and your HTML5/JS stack.\n\nI love the Web, I love to challenge the status quo and love what I do.",
   "threeCurrentPositions": {
-    "_total": 1,
-    "values": [{
-      "company": {
-        "id": 9016,
-        "industry": "Internet",
-        "name": "Melbourne IT",
-        "size": "201-500 employees",
-        "ticker": "MLB",
-        "type": "Public Company"
+    "_total": 2,
+    "values": [
+      {
+        "company": {
+          "id": 9016,
+          "industry": "Internet",
+          "name": "Melbourne IT",
+          "size": "201-500 employees",
+          "ticker": "MLB",
+          "type": "Public Company"
+        },
+        "id": 522866547,
+        "isCurrent": true,
+        "startDate": {
+          "month": 12,
+          "year": 2013
+        },
+        "summary": "* Thought leadership & change management\n* Drive development team agility via Scrum and DevOps approaches to software development\n* Coach group on applying MVP thinking, delivering incremental business value\n* Lead conversion rate optimisation for Melbourne IT web properties \n* Lead design of modern RESTful API to support Internal/B2B/B2C/App channels\n* Drive move from traditional web frameworks (Zend/PHP) to more performant Angular JS desktop & mobile applications",
+        "title": "Manager, Digital"
       },
-      "id": 522866547,
-      "isCurrent": true,
-      "startDate": {
-        "month": 12,
-        "year": 2013
-      },
-      "summary": "* Thought leadership & change management\n* Drive development team agility via Scrum and DevOps approaches to software development\n* Coach group on applying MVP thinking, delivering incremental business value\n* Lead conversion rate optimisation for Melbourne IT web properties \n* Lead design of modern RESTful API to support Internal/B2B/B2C/App channels\n* Drive move from traditional web frameworks (Zend/PHP) to more performant Angular JS desktop & mobile applications",
-      "title": "Manager, Digital"
-    }]
+      {
+        "company": {
+          "industry": "Information Technology and Services",
+          "name": "OneGeek"
+        },
+        "id": 549327750,
+        "isCurrent": true,
+        "startDate": {
+          "month": 1,
+          "year": 2007
+        },
+        "summary": "* Freelance Web Application development\n* Development of JobsFindYou portal (startup)\n* Open Source development (GitHub)",
+        "title": "Freelance Web Developer"
+      }
+    ]
   },
   "threePastPositions": {
     "_total": 3,
@@ -725,7 +813,7 @@
           "month": 8,
           "year": 2008
         },
-        "summary": "* Introduced Agile Development (Scrum) & build automation to improve time to market, improve collaboration and reduce waste improving nr deployment rate > 500%\n* Introduced a fraud detection system > 2 weeks into online channel reducing fraud ~0% of online transaction, saving on charge-backs, domain name registries and manual labour\n* B2B, B2C and B2B2C systems support\n* New product launches into Online and Call Centre channels\n* Served as an SME and Tech Lead on Transformation Project, overseeing the Web stream\n* Lead offshore development initiative in Web arena\n* Introduced Enterprise CMS to reduce manual development\n* Development ambassador, pushing a development-centric culture. Introduction of Hack-days.",
+        "summary": "* Introduced Agile Development (Scrum) & build automation to improve time to market, improve collaboration and reduce waste improving nr deployment rate > 500\\%\n* Introduced a fraud detection system > 2 weeks into online channel reducing fraud \textasciitilde0% of online transaction, saving on charge-backs, domain name registries and manual labour\n* B2B, B2C and B2B2C systems support\n* New product launches into Online and Call Centre channels\n* Served as an SME and Tech Lead on Transformation Project, overseeing the Web stream\n* Lead offshore development initiative in Web arena\n* Introduced Enterprise CMS to reduce manual development\n* Development ambassador, pushing a development-centric culture. Introduction of Hack-days.",
         "title": "Web Team Leader"
       },
       {
@@ -740,7 +828,7 @@
         "id": 530690478,
         "isCurrent": false,
         "startDate": {"year": 2009},
-        "summary": "Developed B2C and B2B portals for the online resume platform.\nIntroduced initial monitization via Affiliate and advertiser program.\nAssisted with Strategic direction of company.",
+        "summary": "* Developed B2C and B2B portals for the online resume platform.\n* Introduced initial monitization via Affiliate and advertiser program.\n* Assisted with Strategic direction of company.",
         "title": "Founding Director"
       }
     ]

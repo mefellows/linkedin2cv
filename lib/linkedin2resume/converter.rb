@@ -3,6 +3,7 @@ require 'asciidoctor'
 require 'launchy'
 require 'tempfile'
 require 'tilt'
+require 'yaml'
 
 module Linkedin2Resume
 
@@ -15,43 +16,21 @@ module Linkedin2Resume
 
     def initialize
       @display_fields = ["company", "publication", "patent", "language", "skills", "certification", "education", "course", "volunteer", "recommendations"]
-      @profile_fields = ["projects,main-address,phone-numbers,email-address,first-name,last-name,maiden-name,formatted-name,phonetic-first-name,phonetic-last-name,formatted-phonetic-name,headline,location:(name),location:(country:(code)),industry,current-status,current-share,num-connections,num-connections-capped,summary,specialties,positions,picture-url,site-standard-profile-request,api-standard-profile-request:(url),api-standard-profile-request:(headers),public-profile-url,last-modified-timestamp,proposal-comments,associations,interests,publications:(id,title,publisher:(name),authors:(id,name,person),date,url,summary),patents,languages:(id,language:(name),proficiency:(level,name)),skills:(id,skill:(name)),certifications:(id,name,authority:(name),number,start-date,end-date),educations:(id,school-name,field-of-study,start-date,end-date,degree,activities,notes),courses:(id,name,number),three-current-positions:(id,title,summary,start-date,end-date,is-current,company),three-past-positions:(id,title,summary,start-date,end-date,is-current,company),num-recommenders,recommendations-received:(id,recommendation-type,recommendation-text,recommender),mfeed-rss-url,following,job-bookmarks,suggestions,date-of-birth,member-url-resources:(url,name),related-profile-views,honors-awards"]
+      @profile_fields = ["projects:(start-date,end-date,description,id,name,url),main-address,phone-numbers,email-address,first-name,last-name,maiden-name,formatted-name,phonetic-first-name,phonetic-last-name,formatted-phonetic-name,headline,location:(name),location:(country:(code)),industry,current-status,current-share,num-connections,num-connections-capped,summary,specialties,positions,picture-url,site-standard-profile-request,api-standard-profile-request:(url),api-standard-profile-request:(headers),public-profile-url,last-modified-timestamp,proposal-comments,associations,interests,publications:(id,title,publisher:(name),authors:(id,name,person),date,url,summary),patents,languages:(id,language:(name),proficiency:(level,name)),skills:(id,skill:(name)),certifications:(id,name,authority:(name),number,start-date,end-date),educations:(id,school-name,field-of-study,start-date,end-date,degree,activities,notes),courses:(id,name,number),three-current-positions:(id,title,summary,start-date,end-date,is-current,company),three-past-positions:(id,title,summary,start-date,end-date,is-current,company),num-recommenders,recommendations-received:(id,recommendation-type,recommendation-text,recommender),mfeed-rss-url,following,job-bookmarks,suggestions,date-of-birth,member-url-resources:(url,name),related-profile-views,honors-awards"]
     end
 
-    # curl -v "https://api.linkedin.com/v1/people/~:(last-modified-timestamp,proposal-comments,associations,interests,publications,patents,languages,skills,certifications,educations,courses,volunteer,three-current-positions,three-past-positions,num-recommenders,recommendations-received,mfeed-rss-url,following,job-bookmarks,suggestions,date-of-birth,member-url-resources,related-profile-views,honors-awards)?format=json&oauth2_access_token=AQWLZ-F5SSlZo0hKMiC4CQTcgoFwVUgJPgHPEMmE7JeKRgj6_3aAEYW9I4WtExHLHyXBEBoZva4ctKmDgNwtVG56FMG0P41toBLIzzqKGTsHKipdpVVB6Bx7cT7vNyL6v7Bz45226bbnJ6JJNsSzorpXI9zxAEQhUUMuR-5GjhiWeIJJcN4"
-    # curl -v "https://api.linkedin.com/v1/people/~:(last-modified-timestamp,proposal-comments,associations,interests,publications:(id,title,publisher:(name),authors:(id,name,person),date,url,summary),patents,languages:(id,language:(name),proficiency:(level,name)),skills:(id,skill:(name)),certifications:(id,name,authority:(name),number,start-date,end-date),educations:(id,school-name,field-of-study,start-date,end-date,degree,activities,notes),courses:(id,name,number),three-current-positions:(id,title,summary,start-date,end-date,is-current,company),three-past-positions:(id,title,summary,start-date,end-date,is-current,company),num-recommenders,recommendations-received:(id,recommendation-type,recommendation-text,recommender),mfeed-rss-url,following,job-bookmarks,suggestions,date-of-birth,member-url-resources:(url,name),related-profile-views,honors-awards)?format=json&oauth2_access_token=AQWLZ-F5SSlZo0hKMiC4CQTcgoFwVUgJPgHPEMmE7JeKRgj6_3aAEYW9I4WtExHLHyXBEBoZva4ctKmDgNwtVG56FMG0P41toBLIzzqKGTsHKipdpVVB6Bx7cT7vNyL6v7Bz45226bbnJ6JJNsSzorpXI9zxAEQhUUMuR-5GjhiWeIJJcN4"
     # Public: Create a resume given a LinkedIn Profile
     #
-    #
-    def create_resume()
+    # Takes
+    def create_resume(options = {})
 
       # Get Profile
       profile = get_profile
 
-      # require 'tilt/asciidoc'
-      # billy = 'joel'
-      # template = Tilt::AsciidoctorTemplate.new('templates/foo.asciidoc')
-      # output = template.render(self, :billy => billy)
-
-      # puts Asciidoctor.render File.read('templates/foo.asciidoc')
-
-      require 'tilt/erb'
-      output_filename = 'test.latex'
-      template = Tilt.new('templates/foo.erb')
-
-      output = template.render(self, :profile => profile, :home_phone => '+61 3 9628 3624', :mobile_phone => '+61 422 082 738')
-      # Replace chars in LaTeX template
-      output = output.gsub(/(?<!\\)&/, '\\\&')
-      output = output.gsub(/(?<!\\)\$(?!\\)/, '\\\$')
-      output_file = File.new(output_filename, 'w')
-      output_file.write(output)
-      output_file.close
-
-      # Make sure this variable is escaped, clearly.....
-      exec("pdflatex #{output_filename}")
 
       # Find output factory/plugin (fetch from Github?)
-
+      # Currently only supports one LaTeX template
+      latex_pdf(profile, options)
 
       # Find stylist
 
@@ -99,11 +78,23 @@ module Linkedin2Resume
     # Public: Produce a Latex PDF
     #
     #
-    def latex_pdf
-      output = latex
+    def latex_pdf(profile, options)
+      require 'tilt/erb'
+      output_filename = 'output.latex'
+      template = Tilt.new('templates/cv.erb')
 
-      exec('pdflatex /tmp/foo.tex')
+      # :home_phone => '+61 3 9628 3624', :mobile_phone => '+61 422 082 738'
 
+      output = template.render(self, :profile => profile, :options => options)
+      # Replace chars in LaTeX template
+      output = output.gsub(/(?<!\\)&/, '\\\&')
+      output = output.gsub(/(?<!\\)\$(?!\\)/, '\\\$')
+      output_file = File.new(output_filename, 'w')
+      output_file.write(output)
+      output_file.close
+
+      # Make sure this variable is escaped, clearly.....
+      exec("pdflatex #{output_filename}")
     end
 
     # Public: Produce a Latex

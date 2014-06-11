@@ -44,6 +44,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "asciidoctor"
   spec.add_runtime_dependency "launchy"
   spec.add_runtime_dependency "tilt"
+  spec.add_runtime_dependency "yaml"
   # spec.add_development_dependency "pact"
   spec.add_development_dependency "webmock"
 end

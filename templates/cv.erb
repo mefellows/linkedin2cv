@@ -20,6 +20,8 @@
 
 \documentclass{scrartcl}
 
+\usepackage[T1]{fontenc}
+
 \reversemarginpar % Move the margin to the left of the page
 
 \newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
@@ -32,7 +34,7 @@
 \usepackage{hyperref} % Required for adding links	and customizing them
 \hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
 
-\newlength{\datebox}\settowidth{\datebox}{Spring 2011} % Set the width of the date box in each block
+\newlength{\datebox}\settowidth{\datebox}{13-2012--12/2014} % Set the width of the date box in each block
 
 \newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
 \vspace{0.5em}} % Add some white space after each new entry
@@ -87,27 +89,33 @@
 \noindent\spacedlowsmallcaps{Professional Experience}\vspace{1em}
 
 <% for @position in profile.positions.all %>
-    <% if @position.is_current %>
-        \NewEntry{<%=@position.start_date.year %>--Present}{<%= @position.title %>, \textsc{<%= @position.company.name %>}}
-    <% else %>
-        \NewEntry{<%=@position.start_date.year %>--<%=@position.end_date.year %>}{<%= @position.title %>, \textsc{<%= @position.company.name %>}}
-    <% end %>
-    \Description{\MarginText{<%= @position.company.name %>}
-    <% for @line in @position.summary.lines %>
-        <% if @line.match('\* ') %>
-            \begin{itemize}
-            \item <%= @line.gsub("\* ", '') %>
-            \end{itemize}
+    <% if !@position.summary.nil? %>
+        <% if @position.is_current %>
+            \NewEntry{<%=@position.start_date.year %>--Present}{<%= @position.title %>, \textsc{<%= @position.company.name %>}}
         <% else %>
-            <%= @line %>
+            \NewEntry{<%=@position.start_date.year %>--<%=@position.end_date.year %>}{<%= @position.title %>, \textsc{<%= @position.company.name %>}}
         <% end %>
+        \Description{\MarginText{<%= @position.company.name %>}
+        <% if !@position.summary.nil? %>
+            <% for @line in @position.summary.lines %>
+                <% if @line.strip.match(/^(\* |\- )/) %>
+                    \begin{itemize}
+                    \item <%= @line.strip.gsub(/^(\* |\- )/, '') %>
+                    \end{itemize}
+                <% else %>
+                    <%= @line %>
+                <% end %>
+            <% end %>
+        <% end %>
+
+        Reference: Mark \textsc{Murphy}\ \ $\cdotp$\ \ +61 (3) 9628 1234\ \ $\cdotp$\ \ \href{mailto:mark.murphy@melbourneit.com.au}{mark.murphy@melbourneit.com.au}}
+
+        \vspace{.5em} % Extra space between sections
     <% end %>
-
-    Reference: Mark \textsc{Murphy}\ \ $\cdotp$\ \ +61 (3) 9628 1234\ \ $\cdotp$\ \ \href{mailto:mark.murphy@melbourneit.com.au}{mark.murphy@melbourneit.com.au}}
-
-    %------------------------------------------------
-
 <% end %>
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
 
 %----------------------------------------------------------------------------------------
 %	PROJECTS
@@ -117,22 +125,29 @@
 
 <% for @project in profile.projects.all %>
     <% if @project.url %>
-        \NewEntry{website}{\href{<%= @project.url %>}{<%= @project.url %>}} % Project website
+        %\NewEntry{website}{\href{<%= @project.url %>}{<%= @project.url %>}} % Project website
     <% end %>
-    \NewEntry{<%= @project.name %>, \textsc{Melbourne IT}}
-    \Description{
+
+    <% if @project.end_date.nil? %>
+        \NewEntry{<%=@project.start_date.year %>--Present}{\textsc{Melbourne IT}}
+    <% else %>
+        \NewEntry{<%=@project.start_date.month %>/<%=@project.start_date.year %>--<%=@project.end_date.month %>/<%=@project.end_date.year %>}{\textsc{Melbourne IT}}
+    <% end %>
+
+    \Description{\MarginText{<%=@project.name %>}
     <% for @line in @project.description.lines %>
-        <% if @line.match('\* ') %>
+        <% if @line.strip.match(/^(\* |\- )/) %>
             \begin{itemize}
-                \item <%= @line.gsub("\* ", '') %>
+                \item <%= @line.strip.gsub(/^(\* |\- )/, '') %>
             \end{itemize}
         <% else %>
             <%= @line %>
         <% end %>
-    <% end %>}
+    <% end %>
 
-Reference: Mark \textsc{Murphy}\ \ $\cdotp$\ \ +61 (3) 9628 1234\ \ $\cdotp$\ \ \href{mailto:mark.murphy@melbourneit.com.au}{mark.murphy@melbourneit.com.au}
+Reference: Mark \textsc{Murphy}\ \ $\cdotp$\ \ +61 (3) 9628 1234\ \ $\cdotp$\ \ \href{mailto:mark.murphy@melbourneit.com.au}{mark.murphy@melbourneit.com.au}}
 
+\vspace{.5em} % Extra space between sections
 %------------------------------------------------
 
 <% end %>
@@ -158,9 +173,9 @@ Reference: Mark \textsc{Murphy}\ \ $\cdotp$\ \ +61 (3) 9628 1234\ \ $\cdotp$\ \ 
 
     <% if !@education.activities.nil? %>
         <% for @line in @education.activities.lines %>
-            <% if @line.match('\* ') %>
+            <% if @line.strip.match(/^(\* |\- )/) %>
                 \begin{itemize}
-                \item <%= @line.gsub("\* ", '') %>
+                \item <%= @line.strip.gsub(/^(\* |\- )/, '') %>
                 \end{itemize}
             <% else %>
                 <%= @line %>
@@ -171,9 +186,9 @@ Reference: Mark \textsc{Murphy}\ \ $\cdotp$\ \ +61 (3) 9628 1234\ \ $\cdotp$\ \ 
 
     <% if !@education.description.nil? %>
         <% for @line in @education.description.lines %>
-            <% if @line.match('\* ') %>
+            <% if @line.strip.match(/^(\* |\- )/) %>
                 \begin{itemize}
-                \item <%= @line.gsub("\* ", '') %>
+                \item <%= @line.strip.gsub(/^(\* |\- )/, '') %>
                 \end{itemize}
             <% else %>
                 <%= @line %>
@@ -181,6 +196,8 @@ Reference: Mark \textsc{Murphy}\ \ $\cdotp$\ \ +61 (3) 9628 1234\ \ $\cdotp$\ \ 
 
         <% end %>
     <% end %>}
+\vspace{.5em} % Extra space between sections
+
 <% end %>
 
 %------------------------------------------------
@@ -211,14 +228,33 @@ Reference: Mark \textsc{Murphy}\ \ $\cdotp$\ \ +61 (3) 9628 1234\ \ $\cdotp$\ \ 
 %	COMPUTER SKILLS
 %----------------------------------------------------------------------------------------
 
-\spacedlowsmallcaps{Expertise \textbackslash Skills}\vspace{1em}
+\spacedlowsmallcaps{Expertise\textbackslash Skills}\vspace{1em}
 
-\Description{\MarginText{Technical}
-<% for @skill in profile.skills.all.shift(10) %>
+\Description{\MarginText{Leadership}
+<% for @skill in profile.skills.all.shift(9) %>
     %\textsc{<%=@skill.skill.name%>}
     <%=@skill.skill.name%>,
-<% end %>}
+<% end %>
+<% for @skill in profile.skills.all.shift(1) %>
+    <%=@skill.skill.name%>}
+<% end %>
 
+\Description{\MarginText{Technical}
+ Solution Design \& Architecture, REST, APIs, AWS, Puppet, Automation}
+
+\Description{\MarginText{Languages}
+ \textsc{Java}, \textsc{PHP}, \textsc{Ruby}, \textsc{Scala}}
+
+
+%DevOps & Solution Architecture: Puppet, Vagrant, AWS, CloudFormation
+%Mobile Development: Responsive Design with HTML5, Native App with Sencha Touch & PhoneGap
+%Web Development: HTML5, JavaScript, CSS, XML\XSLT, Apache, PHP, Zend Framework
+%Enterprise Java: JSP, JSF, Spring, Spring Web Flow, Spring MVC, Tomcat, JBoss (basic)
+%API Development / Integration: RESTful/SOAP-based services on Fuse ESB (Apache ServiceMix, Camel, ActiveMQ, CXF)
+%OSGI: Eclipse Virgo, OSGi bundles (Bnd Tools, Bundlor, Maven Bundle Plugin)
+%Testing: TDD, PHPUnit, JUnit, TestNG, Selenium
+%SCM & Continuous Integration: Hudson, Git, CVS, SVN, Maven, Ant
+%Development Process: Agile (Scrum), SDLC
 
 %\Description{\MarginText{Technical}\textsc{java}}
 
@@ -234,7 +270,7 @@ Reference: Mark \textsc{Murphy}\ \ $\cdotp$\ \ +61 (3) 9628 1234\ \ $\cdotp$\ \ 
 %	OTHER INFORMATION
 %----------------------------------------------------------------------------------------
 
-%\spacedlowsmallcaps{Other Information}\vspace{1em}
+\spacedlowsmallcaps{Other Information}\vspace{1em}
 
 %\Description{\MarginText{Awards}2011\ \ $\cdotp$\ \ School of Business Postgraduate Scholarship}
 
@@ -278,6 +314,11 @@ Reference: Mark \textsc{Murphy}\ \ $\cdotp$\ \ +61 (3) 9628 1234\ \ $\cdotp$\ \ 
 \Description{\MarginText{Interests}<%= profile.interests.gsub(',', '\\\ \\\ $\\\cdotp$\\\ \\\ ') %>}
 
 %----------------------------------------------------------------------------------------
+
+\AtEndDocument{\vfill%
+% Your end-of-document content
+Produced with love by Latex and https://github.com/mefellows/linkedin2cv
+}
 
 \end{cv}
 
