@@ -7,14 +7,14 @@ require 'eventmachine'
 #
 # Public: Front end UI and API
 #
-module Linkedin2Resume
+module Linkedin2CV
   EventMachine.run do
-    class Linkedin2ResumeApplication < Sinatra::Application
+    class Linkedin2CVApplication < Sinatra::Application
 
       configure { set :server, 'thin' }
       use Rack::Deflater
-      use Linkedin2Resume::Routes::API
-      use Linkedin2Resume::Routes::Web
+      use Linkedin2CV::Routes::API
+      use Linkedin2CV::Routes::Web
 
        get '/status' do
         "alive"

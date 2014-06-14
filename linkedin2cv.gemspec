@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'linkedin2resume/version'
+require 'linkedin2cv/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "linkedin2resume"
-  spec.version       = Linkedin2Resume::VERSION
+  spec.name          = "linkedin2cv "
+  spec.version       = Linkedin2CV::VERSION
   spec.authors       = ["mefellows"]
   spec.email         = ["matt.fellows@onegeek.com.au"]
-  spec.summary       = "Linkedin2Resume"
-  spec.description   = "An awesome linkedin2resume"
-  spec.homepage      = "https://github.com/mefellows/linkedin2resume"
+  spec.summary       = "Linkedin2CV"
+  spec.description   = "An awesome linkedin2cv "
+  spec.homepage      = "https://github.com/mefellows/linkedin2cv "
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -44,7 +44,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "asciidoctor"
   spec.add_runtime_dependency "launchy"
   spec.add_runtime_dependency "tilt"
-  spec.add_runtime_dependency "yaml"
   # spec.add_development_dependency "pact"
   spec.add_development_dependency "webmock"
 end

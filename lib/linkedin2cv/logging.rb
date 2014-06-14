@@ -25,9 +25,9 @@ module Logging
       # Log to file or stdout?
       if (ENV['LOG_OUTPUT_FILENAME'] && !ENV['LOG_OUTPUT_FILENAME'].empty?)
         puts ENV['LOG_OUTPUT_FILENAME']
-        logger.outputters << Log4r::FileOutputter.new('linkedin2resumelog', :filename => ENV['LOG_OUTPUT_FILENAME'])
+        logger.outputters << Log4r::FileOutputter.new('linkedin2cvlog', :filename => ENV['LOG_OUTPUT_FILENAME'])
       elsif
-        logger.outputters << Log4r::StdoutOutputter.new('linkedin2resumelog')
+        logger.outputters << Log4r::StdoutOutputter.new('linkedin2cvlog')
       end
       logger
     end

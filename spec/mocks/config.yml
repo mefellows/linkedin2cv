@@ -1,7 +1,31 @@
 home_phone:   +61 3 1234 5678
 mobile_phone: +61 422 123 456
-reference:
-  first_name: Bill
-  last_name:  Murry
-  phone:      +61 3 0987 6543
-  email:      bill@foobar.com
+
+references:
+  - bill:
+      projects:   ["Melbourne IT AWS Migration \\ \"DevOps\""]
+      roles:      ["Manager, Digital"]
+      first_name: Bill
+      last_name:  Murry
+      phone:      +61 3 0987 6543
+      email:      bill@foobar.com
+
+skills:
+  max:        10
+  extra:
+   - technical: [Solution Design & Architecture, REST, APIs, AWS, Puppet, Automation]
+   - languages: [Java, PHP, Ruby, Scala]
+
+other:
+  interests: [The Internet, Human Computer Interaction & Usability, Basketball, Waterskiing\Wakeboarding, Snowboarding]
+
+projects:
+  - "Melbourne IT AWS Migration \\ \"DevOps\"": "Melbourne IT"
+  - "Melbourne IT Website Refresh (In Progress)": "Melbourne IT"
+  - "Startup - Mobile App (Advertising)": "Freelance"
+  - "Transformation": "Melbourne IT"
+  - "Renewal - Conversion Rate Optimisation": "Melbourne IT"
+  - "Skylock - Cloud-based GPS Security Portal": "Freelance"
+  - "Substantiate - GPS logbook solutions": "Freelance"
+  - "Auto-renewal": "Melbourne IT"
+  - "Business Transformation Programme (IWS)": "Melbourne IT"

@@ -160,8 +160,12 @@
     "name": "Melbourne, Australia"
   },
   "memberUrlResources": {
-    "_total": 1,
+    "_total": 2,
     "values": [
+      {
+        "name": "Company Website",
+        "url": "http://www.melbourneit.com.au"
+      },
       {
         "name": "Personal Website",
         "url": "http://www.onegeek.com.au"
@@ -169,7 +173,7 @@
     ]
   },
   "mfeedRssUrl": "http://www.linkedin.com/rss/mefeed?key=qDNK_YloNKBf9dbWmw17l_wFbl9MGyECGnM1kYpTrUuvt7F6t-OhQlPzHUHplVt",
-  "numConnections": 434,
+  "numConnections": 435,
   "numConnectionsCapped": false,
   "numRecommenders": 3,
   "pictureUrl": "http://m.c.lnkd.licdn.com/mpr/mprx/0_4dB698eI8kV8WU0PZ7kM9GjIhG0CIgfPVH_M9GRc03ItqJ41NfboZC7JaExgesaxJov4J5WC-5ep",
@@ -249,7 +253,7 @@
           "month": 8,
           "year": 2008
         },
-        "summary": "* Introduced Agile Development (Scrum) & build automation to improve time to market, improve collaboration and reduce waste improving nr deployment rate > 500\\%\n* Introduced a fraud detection system > 2 weeks into online channel reducing fraud to \\textasciitilde0\\% of online transaction, saving on charge-backs, domain name registries and manual labour\n* B2B, B2C and B2B2C systems support\n* New product launches into Online and Call Centre channels\n* Served as an SME and Tech Lead on Transformation Project, overseeing the Web stream\n* Lead offshore development initiative in Web arena\n* Introduced Enterprise CMS to reduce manual development\n* Development ambassador, pushing a development-centric culture. Introduction of Hack-days.",
+        "summary": "* Introduced Agile Development (Scrum) & build automation to improve time to market, improve collaboration and reduce waste improving nr deployment rate > 500%\n* Introduced a fraud detection system > 2 weeks into online channel reducing fraud ~0% of online transaction, saving on charge-backs, domain name registries and manual labour\n* B2B, B2C and B2B2C systems support\n* New product launches into Online and Call Centre channels\n* Served as an SME and Tech Lead on Transformation Project, overseeing the Web stream\n* Lead offshore development initiative in Web arena\n* Introduced Enterprise CMS to reduce manual development\n* Development ambassador, pushing a development-centric culture. Introduction of Hack-days.",
         "title": "Web Team Leader"
       },
       {
@@ -313,10 +317,10 @@
     ]
   },
   "projects": {
-    "_total": 7,
+    "_total": 9,
     "values": [
       {
-        "description": "Led a staged migration of the Melbourne IT Web platforms from existing internal, physical Solaris infrastructure to commodity Intel environment running RHEL.\n\nSummary:\n\n   * Scope: Migration of MIT website and subsystems, including eCommerce, Renewal, Self-Service and CMS Managed legacy components tied heavily to existing environments\n\n   * Deployment automation of complex environment via internally built engine (project Godspeed) and distributed RPM packages\n\n   * Re-architected to suit HA environment, including a layer 7 reverse proxy (Nginx) for performance, security and flexibility in configuration with the services that comprise the overall web platform\n\n   * Revised DR strategy for existing integrated internal systems\n\n   * Implementation of major infra-as-code principles and leveraging as Puppet, Jenkins CI and Git as core components\n\n   * Integration with a centralised sys-logging platform and Splunk data sink\n   * Focus on increased use and reliance monitoring and reporting tools for proactive system health, including Graphite, NewRelic, Sentry, Splunk and Nagios.\n\n   * Close collaboration with Operations team to ensure \n\nKey successes: \n\n   * Increased conversion, cross-product attachment & engagement rates\n   * Avg. deployment time reduced from 1 hour to less than 15 mins\n\n   * Decrease in page loading times between 30-50\\%\n\n   * Significant reduction in website error rate\n\n   * Increase in website Apdex \\ NPS\n\n   * Shifted Web Dev and Operations working paradigm to a more open, collaborative and proactive partnership\n",
+        "description": "Led a staged migration of the Melbourne IT Web platforms from existing internal, physical Solaris infrastructure to commodity Intel environment running RHEL.\n\nSummary:\n\n   * Scope: Migration of MIT website and sub-systems, including eCommerce, Renewal, Self-Service and CMS Managed legacy components tied heavily to existing environments\n\n   * Deployment automation of complex environment via internally built engine (project Godspeed) and distributed RPM packages\n\n   * Re-architected to suit HA environment, including a layer 7 reverse proxy (Nginx) for performance, security and flexibility in configuration with the services that comprise the overall web platform\n\n   * Revised DR strategy for existing integrated internal systems\n\n   * Implementation of major infra-as-code principles and leveraging as Puppet, Jenkins CI and Git as core components\n\n   * Integration with a centralised sys-logging platform and Splunk data sink\n   * Focus on increased use and reliance monitoring and reporting tools for proactive system health, including Graphite, NewRelic, Sentry, Splunk and Nagios.\n\n   * Close collaboration with Operations team to ensure \n\nKey successes: \n\n   * Increased conversion, cross-product attachment & engagement rates\n   * Avg. deployment time reduced from 1 hour to less than 15 mins\n\n   * Decrease in page loading times between 30-50%\n\n   * Significant reduction in website error rate\n\n   * Increase in website Apdex \\ NPS\n\n   * Shifted Web Dev and Operations working paradigm to a more open, collaborative and proactive partnership\n",
         "id": 167,
         "name": "Melbourne IT AWS Migration \\ \"DevOps\"",
         "startDate": {
@@ -358,7 +362,7 @@
         }
       },
       {
-        "description": "2013\n* Conversion rate optimisation of online Renewing customers\n* Significantly increased MRR via attachment rates\n* Collaborated with Marketing / Product to deliver integrated experience\n* Delivered using offshore resources (resource constrained due to Transformation)\n* Positive growth in 2013, first time during Transformation programme\n\n2014\n* Improving speed/performance (move to cloud and new technology)\n* Refreshing UX for design consistency & aesthetics\n* Significant new product launches\n* Increased NPS score\n* Added mobile/tablet responsive design\n* Achieved 16\\% conversion rate lift from previous conversion base levels.",
+        "description": "2013\n* Conversion rate optimisation of online Renewing customers\n* Significantly increased MRR via attachment rates\n* Collaborated with Marketing / Product to deliver integrated experience\n* Delivered using offshore resources (resource constrained due to Transformation)\n* Positive growth in 2013, first time during Transformation programme\n\n2014\n* Improving speed/performance (move to cloud and new technology)\n* Refreshing UX for design consistency & aesthetics\n* Significant new product launches\n* Increased NPS score\n* Added mobile/tablet responsive design\n* Achieved 16% conversion rate lift from previous conversion base levels.",
         "endDate": {
           "month": 6,
           "year": 2014
@@ -372,7 +376,33 @@
         "url": "http://renew.melbourneit.com.au"
       },
       {
-        "description": "Part of an E2E solution that delivered industries highest auto-renewal rates for domain names (> 80\\%)\n\n* UX implementation and careful interaction design played critical role in opting in more customers and reduction in opt-out\n* Worked with talented Marketing group on communications (on/offline)",
+        "description": "Substantiate is Australia's leading provider of tax logbook services and products, using a mix of technology and in-house expertise to provide innovative solutions to clients.\n\nProduct:\n\n* Tax consulting\n* Automate analysis of FBT, FTC and other tax legislation using GPS data and publicly available road databases (Australian road databases + Open Street Map)\n* Produce ATO compliant reports for lodgement by client\n\nProject responsibilities:\n\n* Leveraging the Skylock platform's GPS capabilities (see other project) extend the Architecture to support reporting and analysis needs of the Substantiate arm of the business\n* Create web reporting interface\n* Create generic data ingestion platform for bulk, one-off analyses\n* Use of data analysis tools (Hadoop ecosystem, NoSQL databases, R etc.) to look at other financial opportunities for clients\n* Ad-hoc data analysis and reporting (Generally Ruby Scripting around above tools)",
+        "endDate": {
+          "month": 4,
+          "year": 2013
+        },
+        "id": 176,
+        "name": "Substantiate - GPS logbook solutions",
+        "startDate": {
+          "month": 9,
+          "year": 2012
+        }
+      },
+      {
+        "description": "SkyLock is a cloud-based security product, providing an affordable and intuitive GPS tracking solution for the recreational vehicle market (Cars, Caravans, Boats etc.)\n\nCore product features:\n\n* 24/7 monitoring\n* Intuitive Web interface with near-real time event tracking\n* Geofencing, Tow alarms, speed alerts and more\n\nProject responsibilities:\n\n* Design and deliver solution architecture\n* Implementation of secure (OAuth2) RESTful API, integration middleware and micro-service components (Fuse ESB \\ MoM \\ JEE)\n* Oversee Web Development (Spring MVC) stream\n* Setup and deployment of HA infrastructure to AWS cloud, including CI and deployment automation",
+        "endDate": {
+          "month": 9,
+          "year": 2012
+        },
+        "id": 174,
+        "name": "Skylock - Cloud-based GPS Security Portal",
+        "startDate": {
+          "month": 4,
+          "year": 2012
+        }
+      },
+      {
+        "description": "Part of an E2E solution that delivered industries highest auto-renewal rates for domain names (> 80%)\n\n* UX implementation and careful interaction design played critical role in opting in more customers and reduction in opt-out\n* Worked with talented Marketing group on communications (on/offline)",
         "endDate": {
           "month": 3,
           "year": 2013
@@ -702,28 +732,28 @@
           "name": "Melbourne Food & Wine Festival"
         },
         {
-          "id": 437035,
-          "name": "Innovation Digital"
-        },
-        {
-          "id": 1808377,
-          "name": "Stone Digital"
-        },
-        {
-          "id": 254118,
-          "name": "Line Digital"
-        },
-        {
-          "id": 722746,
-          "name": "WeAreDigital"
-        },
-        {
-          "id": 1745319,
-          "name": "UNION / Digital"
+          "id": 2401507,
+          "name": "Fed Square Pty Ltd"
         },
         {
           "id": 1099112,
           "name": "Destination Melbourne"
+        },
+        {
+          "id": 327728,
+          "name": "Open iT, Inc."
+        },
+        {
+          "id": 632501,
+          "name": "City of Melbourne"
+        },
+        {
+          "id": 234969,
+          "name": "Next I.T."
+        },
+        {
+          "id": 427218,
+          "name": "Wormhole IT"
         }
       ]
     },
@@ -813,7 +843,7 @@
           "month": 8,
           "year": 2008
         },
-        "summary": "* Introduced Agile Development (Scrum) & build automation to improve time to market, improve collaboration and reduce waste improving nr deployment rate > 500\\%\n* Introduced a fraud detection system > 2 weeks into online channel reducing fraud \textasciitilde0% of online transaction, saving on charge-backs, domain name registries and manual labour\n* B2B, B2C and B2B2C systems support\n* New product launches into Online and Call Centre channels\n* Served as an SME and Tech Lead on Transformation Project, overseeing the Web stream\n* Lead offshore development initiative in Web arena\n* Introduced Enterprise CMS to reduce manual development\n* Development ambassador, pushing a development-centric culture. Introduction of Hack-days.",
+        "summary": "* Introduced Agile Development (Scrum) & build automation to improve time to market, improve collaboration and reduce waste improving nr deployment rate > 500%\n* Introduced a fraud detection system > 2 weeks into online channel reducing fraud ~0% of online transaction, saving on charge-backs, domain name registries and manual labour\n* B2B, B2C and B2B2C systems support\n* New product launches into Online and Call Centre channels\n* Served as an SME and Tech Lead on Transformation Project, overseeing the Web stream\n* Lead offshore development initiative in Web arena\n* Introduced Enterprise CMS to reduce manual development\n* Development ambassador, pushing a development-centric culture. Introduction of Hack-days.",
         "title": "Web Team Leader"
       },
       {

@@ -9,8 +9,8 @@ Everyone stalks you on LinkedIn and that's where you get opportunities. But appa
 
 ## Getting Started
 
-gem install linkedin2resume
-linkedin2resume <todo>
+gem install linkedin2cv
+linkedin2cv  <todo>
 
 ## Acknowledgements
 

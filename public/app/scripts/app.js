@@ -1,12 +1,12 @@
 'use strict';
 
 angular
-  .module('linkedin2resumeApp', [
+  .module('linkedin2cv App', [
     'ngCookies',
     'ngResource',
     'ngSanitize',
     'ngRoute',
-    'linkedin2resumeServices'
+    'linkedin2cv Services'
   ])
   .config(function ($routeProvider) {
     $routeProvider

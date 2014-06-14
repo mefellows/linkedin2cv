@@ -2,7 +2,7 @@
 
 var linkedin2cv Services = angular.module('linkedin2cv Services', ['ngResource']);
 
-linkedin2cv Services.factory('Linkedin2Resume', ['$q', '$rootScope', '$interval', function($q, $rootScope, $interval) {
+linkedin2cv Services.factory('Linkedin2CV', ['$q', '$rootScope', '$interval', function($q, $rootScope, $interval) {
     // We return this object to anything injecting our service
     var Service = {};
 

@@ -5,9 +5,9 @@ require 'haml'
 require 'linkedin-oauth2'
 
 #
-# Public: Front end API for the Linkedin2Resume Generator website
+# Public: Front end API for the Linkedin2CV Generator website
 #
-module Linkedin2Resume
+module Linkedin2CV
   module Routes
     class Web < Sinatra::Application
       # include Logging
@@ -106,11 +106,11 @@ module Linkedin2Resume
 
         if !ENV['CLI_ONLY'].nil?
           logger.info "Got access token, shutting down!: #{session[:atoken]}"
-          # exit!
           Thread.current.thread_variable_set('access_token', token.token)
           Thread.kill(Thread.current)
         end
 
+        redirect "/"
       end
 
       #

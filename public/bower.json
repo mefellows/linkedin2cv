@@ -1,5 +1,5 @@
 {
-  "name": "linkedin2resume-generator",
+  "name": "linkedin2cv -generator",
   "version": "0.0.0",
   "dependencies": {
     "angular": "1.2.15",

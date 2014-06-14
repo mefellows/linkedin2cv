@@ -1,13 +1,13 @@
 require 'rspec'
-require 'linkedin2resume/cli/command'
-require 'linkedin2resume/converter'
+require 'linkedin2cv/cli/command'
+require 'linkedin2cv/converter'
 require 'spec_helper'
 require 'linkedin-oauth2'
 
-describe Linkedin2Resume::Converter do
+describe Linkedin2CV::Converter do
 
   before do
-    @client = Linkedin2Resume::Converter.new
+    @client = Linkedin2CV::Converter.new
     @profile = @client.get_profile
     @config = YAML.load_file(__dir__ + "/mocks/config.yml")
 
@@ -61,8 +61,23 @@ describe Linkedin2Resume::Converter do
 
 
   it 'Should create a latex Resume' do
-
-    puts @config
     @client.create_resume(@config)
+
+    # @config['skills']['extra'].each do |k|
+    #   # puts k
+    #   k.keys.each do |category|
+    #     k[category].each do |v|
+    #       puts v
+    #     end
+    #   end
+    # end
+
   end
+
+  it 'Should monkey patch the ERB Compiler to escape LaTeX special chars' do
+    # puts ERB.new('<%=@profile.location.name %>')
+    replaced = ERB.new("<%= 'this & interesting' %><%= 'I have lots of $$ which is >= Bill Gates but < some Middle Eastern oil tychoons ~ net % of the detail' %>").result
+    expect(replaced).to eql('this \& interestingI have lots of \$\$ which is \textgreater= Bill Gates but \textless some Middle Eastern oil tychoons \textasciitilde net \% of the detail')
+  end
+
 end

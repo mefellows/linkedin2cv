@@ -14,6 +14,53 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+
+%----------------------------------------------------------------------------------------
+%	Re-usable template functions
+%----------------------------------------------------------------------------------------
+
+<%
+   def check_reference(options, project)
+     s = ""
+
+    begin
+     options['references'].each do |ref|
+       ref.keys.each do |key|
+            # puts "comparing #{project} with #{ref[key]['projects']}"
+            if ref[key]['projects'].concat(ref[key]['roles']).index(project) != nil
+              r = ref[key]
+              s = "Reference: #{r['first_name']} \\textsc{#{r['last_name']}}\\\ \\\ $\\cdotp$\\\ \\\ #{r['phone']}\\\ \\\ $\\cdotp$\\\ \\\ \\\href{mailto:#{r['email']}}{#{r['email']}}"
+            end
+        end
+       end
+     rescue
+      puts "Couldn't find reference for project"
+     end
+     s
+   end
+%>
+
+<%
+   def check_project_company(options, project)
+     s = "Personal"
+
+    begin
+        options['projects'].each do |ref|
+            ref.keys.each do |key|
+                puts "comparing #{project} with #{key}"
+                    if key == project
+                        s = "#{ref[key]}"
+                    end
+            end
+        end
+    rescue
+        puts "Couldn't find project company"
+    end
+    s
+end
+%>
+
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
@@ -67,7 +114,9 @@
 
 <% end %>
 
-\NewEntry{phone}{(H) <%= home_phone %>\ \ $\cdotp$\ \ (M)<%= mobile_phone %>} % Phone number(s)
+<% if !options['home_phone'].nil? && !options['mobile_phone'].nil? %>
+\NewEntry{phone}{(H) <%= options['home_phone'] %>\ \ $\cdotp$\ \ (M)<%= options['mobile_phone'] %>} % Phone number(s)
+<% end %>
 
 \vspace{1em} % Extra white space between the personal information section and goal
 
@@ -108,7 +157,7 @@
             <% end %>
         <% end %>
 
-        Reference: Mark \textsc{Murphy}\ \ $\cdotp$\ \ +61 (3) 9628 1234\ \ $\cdotp$\ \ \href{mailto:mark.murphy@melbourneit.com.au}{mark.murphy@melbourneit.com.au}}
+        <%= check_reference(options, @position.title) %>}
 
         \vspace{.5em} % Extra space between sections
     <% end %>
@@ -129,9 +178,9 @@
     <% end %>
 
     <% if @project.end_date.nil? %>
-        \NewEntry{<%=@project.start_date.year %>--Present}{\textsc{Melbourne IT}}
+        \NewEntry{<%=@project.start_date.year %>--Present}{\textsc{<%= check_project_company(options, @project.name) %>}}
     <% else %>
-        \NewEntry{<%=@project.start_date.month %>/<%=@project.start_date.year %>--<%=@project.end_date.month %>/<%=@project.end_date.year %>}{\textsc{Melbourne IT}}
+        \NewEntry{<%=@project.start_date.month %>/<%=@project.start_date.year %>--<%=@project.end_date.month %>/<%=@project.end_date.year %>}{\textsc{<%= check_project_company(options, @project.name) %>}}
     <% end %>
 
     \Description{\MarginText{<%=@project.name %>}
@@ -145,7 +194,7 @@
         <% end %>
     <% end %>
 
-Reference: Mark \textsc{Murphy}\ \ $\cdotp$\ \ +61 (3) 9628 1234\ \ $\cdotp$\ \ \href{mailto:mark.murphy@melbourneit.com.au}{mark.murphy@melbourneit.com.au}}
+    <%= check_reference(options, @project.name) %>}
 
 \vspace{.5em} % Extra space between sections
 %------------------------------------------------
@@ -231,6 +280,9 @@ Reference: Mark \textsc{Murphy}\ \ $\cdotp$\ \ +61 (3) 9628 1234\ \ $\cdotp$\ \ 
 \spacedlowsmallcaps{Expertise\textbackslash Skills}\vspace{1em}
 
 \Description{\MarginText{Leadership}
+
+% Do LinkedIn Skills
+
 <% for @skill in profile.skills.all.shift(9) %>
     %\textsc{<%=@skill.skill.name%>}
     <%=@skill.skill.name%>,
@@ -239,28 +291,17 @@ Reference: Mark \textsc{Murphy}\ \ $\cdotp$\ \ +61 (3) 9628 1234\ \ $\cdotp$\ \ 
     <%=@skill.skill.name%>}
 <% end %>
 
-\Description{\MarginText{Technical}
- Solution Design \& Architecture, REST, APIs, AWS, Puppet, Automation}
+% Custom skills supplied via config
 
-\Description{\MarginText{Languages}
- \textsc{Java}, \textsc{PHP}, \textsc{Ruby}, \textsc{Scala}}
-
-
-%DevOps & Solution Architecture: Puppet, Vagrant, AWS, CloudFormation
-%Mobile Development: Responsive Design with HTML5, Native App with Sencha Touch & PhoneGap
-%Web Development: HTML5, JavaScript, CSS, XML\XSLT, Apache, PHP, Zend Framework
-%Enterprise Java: JSP, JSF, Spring, Spring Web Flow, Spring MVC, Tomcat, JBoss (basic)
-%API Development / Integration: RESTful/SOAP-based services on Fuse ESB (Apache ServiceMix, Camel, ActiveMQ, CXF)
-%OSGI: Eclipse Virgo, OSGi bundles (Bnd Tools, Bundlor, Maven Bundle Plugin)
-%Testing: TDD, PHPUnit, JUnit, TestNG, Selenium
-%SCM & Continuous Integration: Hudson, Git, CVS, SVN, Maven, Ant
-%Development Process: Agile (Scrum), SDLC
-
-%\Description{\MarginText{Technical}\textsc{java}}
-
-%\Description{\MarginText{Languages}\textsc{java}, Adobe Illustrator}
-
-%\Description{\MarginText{Non-Technical}\textsc{python}, \textsc{html}, \LaTeX, OpenOffice, Linux, Microsoft Windows}
+<% if !options['skills'].nil? && !options['skills']['extra'].nil? %>
+    <% for @extra in options['skills']['extra'] %>
+        <% for @category in @extra.keys %>
+        \Description{\MarginText{<%= @category.capitalize %>}
+            <% for @skill in @extra[@category].shift(@extra[@category].size-1) %><%=@skill %>, <% end %>
+            <% for @skill in @extra[@category].shift(1) %><%=@skill %> <% end %>}
+        <% end %>
+    <% end %>
+<% end %>
 
 %------------------------------------------------
 
@@ -272,46 +313,7 @@ Reference: Mark \textsc{Murphy}\ \ $\cdotp$\ \ +61 (3) 9628 1234\ \ $\cdotp$\ \ 
 
 \spacedlowsmallcaps{Other Information}\vspace{1em}
 
-%\Description{\MarginText{Awards}2011\ \ $\cdotp$\ \ School of Business Postgraduate Scholarship}
-
-%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
-
-%\Description{2010\ \ $\cdotp$\ \ Top Achiever Award -- Commerce}
-
-%------------------------------------------------
-
-%\vspace{1em}
-
-%\Description{\MarginText{Communication Skills}2010\ \ $\cdotp$\ \ Oral Presentation at the California Business Conference}
-
-%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
-
-%\Description{2009\ \ $\cdotp$\ \ Poster at the Annual Business Conference in Oregon}
-
-%------------------------------------------------
-
-%\vspace{1em}
-
-%\newlength{\langbox} % Create a new length for the length of languages to keep them equally spaced
-%\settowidth{\langbox}{English} % Length equals the length of "English" - if you have a longer language in your list put it here
-
-%\Description{\MarginText{Languages}\parbox{\langbox}{\textsc{English}}\ \ $\cdotp$\ \ \ Mothertongue}
-
-%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
-
-%\Description{\parbox{\langbox}{\textsc{Spanish}}\ \ $\cdotp$\ \ \ Intermediate (conversationally fluent)}
-
-%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
-
-%\Description{\parbox{\langbox}{\textsc{Dutch}}\ \ $\cdotp$\ \ \ Basic (simple words and phrases only)}
-
-%\vspace{1em} % Negative vertical space to counteract the vertical space between every \Description command
-
-%------------------------------------------------
-
-%\Description{\MarginText{Interests}Piano\ \ $\cdotp$\ \ Cooking\ \ $\cdotp$\ \ Running\ \ $\cdotp$\ \ Chess\ \ $\cdotp$\ \ Dancing}
-
-\Description{\MarginText{Interests}<%= profile.interests.gsub(',', '\\\ \\\ $\\\cdotp$\\\ \\\ ') %>}
+\Description{\MarginText{Interests}<%= profile.interests.gsub(',', '\\\ \\\ $\\\cdotp$\\\ \\\ ')%>}
 
 %----------------------------------------------------------------------------------------
 

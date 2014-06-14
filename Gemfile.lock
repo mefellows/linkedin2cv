@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    linkedin2resume (0.0.1)
+    linkedin2cv  (0.0.1)
       asciidoctor
       clamp
       dotenv
@@ -113,7 +113,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler
-  linkedin2resume!
+  linkedin2cv !
   rake
   rspec
   webmock

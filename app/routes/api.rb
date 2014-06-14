@@ -10,7 +10,7 @@ require "sinatra-websocket"
 #
 # Public: API for the Application
 #
-module Linkedin2Resume
+module Linkedin2CV
   module Routes
       class API < Sinatra::Application
         helpers Sinatra::Param
@@ -33,10 +33,10 @@ module Linkedin2Resume
           200
         end
 
-        # Public: Main API entry point to run the Linkedin2Resume service
+        # Public: Main API entry point to run the Linkedin2CV service
         #
         #
-        get '/api/linkedin2resume/:uri' do
+        get '/api/linkedin2cv /:uri' do
 
         end
 
