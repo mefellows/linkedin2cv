@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["matt.fellows@onegeek.com.au"]
   spec.summary       = "Linkedin2CV"
   spec.description   = "Turn your LinkedIn Profile into a professional resume in many formats (PDF / HTML5 / LaTeX / Asciidoc)"
-  spec.homepage      = "https://github.com/mefellows/linkedin2cv"
+  spec.homepage      = "http://linkedin2cv.herokuapp.com"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
