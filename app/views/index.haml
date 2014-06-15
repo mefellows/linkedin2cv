@@ -2,10 +2,8 @@
   %a{:href => "/auth/logout"} Logout
   %p= profile.headline
   %br
+  %a{:href => "/api/cv/#{session[:atoken]}?access_token=#{session[:atoken]}"} Download CV
   %div= "Your token is  #{session[:atoken]}"
 
 -else
   %a{:href => "/auth"} Login using LinkedIn
-
--if session[:authorize_url]
-  %p="yo, auth url #{session[:authorize_url]}"

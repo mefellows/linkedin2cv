@@ -2,6 +2,7 @@
 .sass-cache/
 *.gem
 bin/*
-!bin/placeholder
+!bin/linkedin2cv
 .env
 .token
+vendor/

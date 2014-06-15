@@ -29,3 +29,7 @@ projects:
   - "Substantiate - GPS logbook solutions": "Freelance"
   - "Auto-renewal": "Melbourne IT"
   - "Business Transformation Programme (IWS)": "Melbourne IT"
+
+output_file: 'matt'
+
+format: 'latex'

@@ -1,0 +1,1424 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classicthesis-Styled CV
+% LaTeX Template
+% Version 1.0 (22/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%----------------------------------------------------------------------------------------
+%	Re-usable template functions
+%----------------------------------------------------------------------------------------
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+%\documentclass{scrartcl}
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+
+\reversemarginpar % Move the margin to the left of the page
+
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+
+\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
+
+\newlength{\datebox}\settowidth{\datebox}{13-2012--12/2014} % Set the width of the date box in each block
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cv}{\spacedallcaps{Matt Fellows}}\vspace{1.5em} % Your name
+
+\noindent\spacedlowsmallcaps{Personal Information}\vspace{0.5em} % Personal information heading
+
+\NewEntry{}{\textit{Resides in Melbourne, Australia}} % Birthplace and date
+
+\NewEntry{email}{\href{mailto:matt.fellows@onegeek.com.au}{matt.fellows@onegeek.com.au}} % Email address
+
+
+\NewEntry{website}{\href{http://www.melbourneit.com.au}{http://www.melbourneit.com.au}} % Personal website
+
+\NewEntry{website}{\href{http://www.onegeek.com.au}{http://www.onegeek.com.au}} % Personal website
+
+
+\NewEntry{phone}{(H) +61 3 1234 5678\ \ $\cdotp$\ \ (M)+61 422 123 456} % Phone number(s)
+
+\vspace{1em} % Extra white space between the personal information section and goal
+
+\noindent\spacedlowsmallcaps{Introduction}\vspace{1em} % Goal heading, could be used for a quotation or short profile instead
+
+    
+        
+\Description{Experienced Development Thought Leader with over 8 commercial years delivering eCommerce Web Applications. Strong online B2C, B2B and API capability with some conversion rate optimisation experience.}
+        
+    
+        
+    
+        
+\Description{I'm an adaptive leader, and challenge teams to think differently about software delivery; no one approach or technology works in all situations. Agile and DevOps are just labels, it's how you approach software delivery that really matters.}
+        
+    
+        
+    
+        
+\Description{You'll find me hacking on GitHub in my spare time in Ruby, Scala \& Angular, and have 8+ years experience in Java, PHP, and your HTML5/JS stack.}
+        
+    
+        
+    
+        
+\Description{I love the Web, I love to challenge the status quo and love what I do.}
+        
+    
+    \vspace{2em} % Goal text
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Professional Experience}\vspace{1em}
+
+    
+        
+            \NewEntry{2013--Present}{Manager, Digital, \textsc{Melbourne IT}}
+        
+        \Description{\MarginText{Melbourne IT}
+        
+            
+                
+                    \begin{itemize}
+                    \item Thought leadership \& change management
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Drive development team agility via Scrum and DevOps approaches to software development
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Coach group on applying MVP thinking, delivering incremental business value
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Lead conversion rate optimisation for Melbourne IT web properties
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Lead design of modern RESTful API to support Internal/B2B/B2C/App channels
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Drive move from traditional web frameworks (Zend/PHP) to more performant Angular JS desktop \& mobile applications
+                    \end{itemize}
+                
+            
+        
+
+        Reference: Bill \textsc{Murry}\ \ $\cdotp$\ \ +61 3 0987 6543\ \ $\cdotp$\ \ \href{mailto:bill@foobar.com}{bill@foobar.com}}
+
+        \vspace{.5em} % Extra space between sections
+    
+    
+        
+            \NewEntry{2007--Present}{Freelance Web Developer, \textsc{OneGeek}}
+        
+        \Description{\MarginText{OneGeek}
+        
+            
+                
+                    \begin{itemize}
+                    \item Freelance Web Application development
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Development of JobsFindYou portal (startup)
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Open Source development (GitHub)
+                    \end{itemize}
+                
+            
+        
+
+        }
+
+        \vspace{.5em} % Extra space between sections
+    
+    
+        
+            \NewEntry{2013--2013}{Manager, Web Development, \textsc{Melbourne IT}}
+        
+        \Description{\MarginText{Melbourne IT}
+        
+            
+                
+                    \begin{itemize}
+                    \item Team leadership/management (Max team size 15)
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Change management
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Web architecture, Web API design \& development
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Led DevOps initiative in ITS Dev; includes transition to public/private cloud, continuous deployment, complete environment automation (puppet) + release automation and ChatOps
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Iterative development using Scrum/Agile
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Grow online channel revenue in close partnership with Business Unit. "Fail-fast" and learn quickly with metrics in Adobe Analytics (SiteCatalyst) with iterative development, agile processes and compartmentalised change
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Promote developer-centric culture
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Deliver custom B2C, B2B and B2B2C web portal for MIT Transformation programme (\$1M+ budget)
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Love Web
+                    \end{itemize}
+                
+            
+        
+
+        }
+
+        \vspace{.5em} % Extra space between sections
+    
+    
+        
+            \NewEntry{2008--2013}{Web Team Leader, \textsc{Melbourne IT}}
+        
+        \Description{\MarginText{Melbourne IT}
+        
+            
+                
+                    \begin{itemize}
+                    \item Introduced Agile Development (Scrum) \& build automation to improve time to market, improve collaboration and reduce waste improving nr deployment rate \textgreater 500\%
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Introduced a fraud detection system \textgreater 2 weeks into online channel reducing fraud \textasciitilde0\% of online transaction, saving on charge-backs, domain name registries and manual labour
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item B2B, B2C and B2B2C systems support
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item New product launches into Online and Call Centre channels
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Served as an SME and Tech Lead on Transformation Project, overseeing the Web stream
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Lead offshore development initiative in Web arena
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Introduced Enterprise CMS to reduce manual development
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Development ambassador, pushing a development-centric culture. Introduction of Hack-days.
+                    \end{itemize}
+                
+            
+        
+
+        }
+
+        \vspace{.5em} % Extra space between sections
+    
+    
+        
+            \NewEntry{2009--2012}{Founding Director, \textsc{Jobs Find You Pty Ltd}}
+        
+        \Description{\MarginText{Jobs Find You Pty Ltd}
+        
+            
+                
+                    \begin{itemize}
+                    \item Developed B2C and B2B portals for the online resume platform.
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Introduced initial monitization via Affiliate and advertiser program.
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Assisted with Strategic direction of company.
+                    \end{itemize}
+                
+            
+        
+
+        }
+
+        \vspace{.5em} % Extra space between sections
+    
+    
+        
+            \NewEntry{2006--2008}{Web Developer, \textsc{Melbourne IT}}
+        
+        \Description{\MarginText{Melbourne IT}
+        
+            
+                
+                    \begin{itemize}
+                    \item PHP (Zend Framework) development
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item User Interface development using POSH, CSS and JS
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Web Service Integration
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Java Application development (J2EE, JSP and XML)
+                    \end{itemize}
+                
+            
+        
+
+        }
+
+        \vspace{.5em} % Extra space between sections
+    
+    
+        
+            \NewEntry{2000--2006}{Manager, \textsc{McDonald's}}
+        
+        \Description{\MarginText{McDonald's}
+        
+            
+                
+                    \begin{itemize}
+                    \item Budgets and labour forecasting
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Stock inventoring
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Team management \& leadership
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Management training
+                    \end{itemize}
+                
+            
+                
+                    \begin{itemize}
+                    \item Made delicious hamburgers
+                    \end{itemize}
+                
+            
+        
+
+        }
+
+        \vspace{.5em} % Extra space between sections
+    
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Projects}\vspace{1em}
+
+    
+        %\NewEntry{website}{\href{http://www.melbourneit.com.au}{http://www.melbourneit.com.au}} % Project website
+    
+
+    
+        \NewEntry{2013--Present}{\textsc{Melbourne IT}}
+    
+
+    \Description{\MarginText{Melbourne IT AWS Migration \ "DevOps"}
+    
+        
+            Led a staged migration of the Melbourne IT Web platforms from existing internal, physical Solaris infrastructure to commodity Intel environment running RHEL.
+
+        
+    
+        
+            
+
+        
+    
+        
+            Summary:
+
+        
+    
+        
+            
+
+        
+    
+        
+            \begin{itemize}
+                \item Scope: Migration of MIT website and sub-systems, including eCommerce, Renewal, Self-Service and CMS Managed legacy components tied heavily to existing environments
+            \end{itemize}
+        
+    
+        
+            
+
+        
+    
+        
+            \begin{itemize}
+                \item Deployment automation of complex environment via internally built engine (project Godspeed) and distributed RPM packages
+            \end{itemize}
+        
+    
+        
+            
+
+        
+    
+        
+            \begin{itemize}
+                \item Re-architected to suit HA environment, including a layer 7 reverse proxy (Nginx) for performance, security and flexibility in configuration with the services that comprise the overall web platform
+            \end{itemize}
+        
+    
+        
+            
+
+        
+    
+        
+            \begin{itemize}
+                \item Revised DR strategy for existing integrated internal systems
+            \end{itemize}
+        
+    
+        
+            
+
+        
+    
+        
+            \begin{itemize}
+                \item Implementation of major infra-as-code principles and leveraging as Puppet, Jenkins CI and Git as core components
+            \end{itemize}
+        
+    
+        
+            
+
+        
+    
+        
+            \begin{itemize}
+                \item Integration with a centralised sys-logging platform and Splunk data sink
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Focus on increased use and reliance monitoring and reporting tools for proactive system health, including Graphite, NewRelic, Sentry, Splunk and Nagios.
+            \end{itemize}
+        
+    
+        
+            
+
+        
+    
+        
+            \begin{itemize}
+                \item Close collaboration with Operations team to ensure
+            \end{itemize}
+        
+    
+        
+            
+
+        
+    
+        
+            Key successes: 
+
+        
+    
+        
+            
+
+        
+    
+        
+            \begin{itemize}
+                \item Increased conversion, cross-product attachment \& engagement rates
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Avg. deployment time reduced from 1 hour to less than 15 mins
+            \end{itemize}
+        
+    
+        
+            
+
+        
+    
+        
+            \begin{itemize}
+                \item Decrease in page loading times between 30-50\%
+            \end{itemize}
+        
+    
+        
+            
+
+        
+    
+        
+            \begin{itemize}
+                \item Significant reduction in website error rate
+            \end{itemize}
+        
+    
+        
+            
+
+        
+    
+        
+            \begin{itemize}
+                \item Increase in website Apdex \ NPS
+            \end{itemize}
+        
+    
+        
+            
+
+        
+    
+        
+            \begin{itemize}
+                \item Shifted Web Dev and Operations working paradigm to a more open, collaborative and proactive partnership
+            \end{itemize}
+        
+    
+
+    Reference: Bill \textsc{Murry}\ \ $\cdotp$\ \ +61 3 0987 6543\ \ $\cdotp$\ \ \href{mailto:bill@foobar.com}{bill@foobar.com}}
+
+\vspace{.5em} % Extra space between sections
+%------------------------------------------------
+
+    
+
+    
+        \NewEntry{2014--Present}{\textsc{Freelance}}
+    
+
+    \Description{\MarginText{Startup - Mobile App (Advertising)}
+    
+        
+            Currently working with a startup to implement a disruptive mobile application prototype in the Marketing / Advertising space. The business details cannot be disclosed at this time, however I am working as a Solution Architect and also a Developer to the client as there are a number of parties required to deliver the project and requires technical coordination.
+
+        
+    
+        
+            
+
+        
+    
+        
+            Technical Summary:
+
+        
+    
+        
+            
+
+        
+    
+        
+            \begin{itemize}
+                \item Scala based application including RESTful API
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Utilization of both SQL \& NoSQL databases for specific requirements, including transactional and large file storage/retrieval
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item AngularJS front end using Iconic library (PhoneGap/Cordova) for mobile app deployment
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Integration with external systems
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Initial deployment to a cloud environment (Heroku, AWS etc.)
+            \end{itemize}
+        
+    
+
+    }
+
+\vspace{.5em} % Extra space between sections
+%------------------------------------------------
+
+    
+        %\NewEntry{website}{\href{http://www.melbourneit.com.au}{http://www.melbourneit.com.au}} % Project website
+    
+
+    
+        \NewEntry{2014--Present}{\textsc{Melbourne IT}}
+    
+
+    \Description{\MarginText{Melbourne IT Website Refresh (In Progress)}
+    
+        
+            Summary:
+
+        
+    
+        
+            
+
+        
+    
+        
+            \begin{itemize}
+                \item Major redesign of flagship Melbourne IT website (www.melbourneit.com.au)
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Goal to reduce web foot print and time-to-market
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Adoption of AngularJS as the main UI framework
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Staged weight loss strategy from existing PHP/Java frameworks into Restful, API driven UIs
+            \end{itemize}
+        
+    
+        
+            
+
+        
+    
+        
+            Key Successes:
+
+        
+    
+        
+            
+
+        
+    
+        
+            \begin{itemize}
+                \item Achieved sub 1-second domain search (fastest of all major competitors)
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Increased domain search engagement
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Increased domain name conversion rates
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Deployment of RESTful API (Migration from legacy SOAP/RPC services)
+            \end{itemize}
+        
+    
+
+    }
+
+\vspace{.5em} % Extra space between sections
+%------------------------------------------------
+
+    
+
+    
+        \NewEntry{12/2012--12/2013}{\textsc{Melbourne IT}}
+    
+
+    \Description{\MarginText{Transformation}
+    
+        
+            Part of an ongoing initiative to re-align the technical and business support platforms that will underpin Melbourne ITs future growth strategies, including M\&A activities.
+
+        
+    
+        
+            
+
+        
+    
+        
+            In 1 year, Melbourne IT was able to deliver Oracle Siebel, BRM, Fusion (AIA) and OBIEE and a fully integrated, custom Web solution tailored to Melbourne IT's domain name oriented business via a custom integration API.
+
+        
+    
+        
+            
+
+        
+    
+        
+            I was responsible for the technical delivery of the following streams of work, run as Agile projects and a budget of over \$1M:
+
+        
+    
+        
+            
+
+        
+    
+        
+            \begin{itemize}
+                \item eCommerce (shop) website
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Customer Self-Service portal
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Identity and Access Management (IAM) system
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Provisioning Fallout Interfaces
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Design of JSON-based, RESTful API abstracting the new Oracle Business Support Systems (above) enabling internal and external clients a modern integration point (delivered by solution partner Rubicon Red)
+            \end{itemize}
+        
+    
+        
+            
+
+        
+    
+        
+            Achievements:
+
+        
+    
+        
+            
+
+        
+    
+        
+            \begin{itemize}
+                \item Delivered on-time and within budget
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item A better platform for our customers, newer products, automated provisioning
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Only mobile/tablet optimised Account console in our industry
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Increased Net Promoter Score (customer satisfaction)
+            \end{itemize}
+        
+    
+
+    }
+
+\vspace{.5em} % Extra space between sections
+%------------------------------------------------
+
+    
+        %\NewEntry{website}{\href{http://renew.melbourneit.com.au}{http://renew.melbourneit.com.au}} % Project website
+    
+
+    
+        \NewEntry{7/2013--6/2014}{\textsc{Melbourne IT}}
+    
+
+    \Description{\MarginText{Renewal - Conversion Rate Optimisation}
+    
+        
+            2013
+
+        
+    
+        
+            \begin{itemize}
+                \item Conversion rate optimisation of online Renewing customers
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Significantly increased MRR via attachment rates
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Collaborated with Marketing / Product to deliver integrated experience
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Delivered using offshore resources (resource constrained due to Transformation)
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Positive growth in 2013, first time during Transformation programme
+            \end{itemize}
+        
+    
+        
+            
+
+        
+    
+        
+            2014
+
+        
+    
+        
+            \begin{itemize}
+                \item Improving speed/performance (move to cloud and new technology)
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Refreshing UX for design consistency \& aesthetics
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Significant new product launches
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Increased NPS score
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Added mobile/tablet responsive design
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Achieved 16\% conversion rate lift from previous conversion base levels.
+            \end{itemize}
+        
+    
+
+    }
+
+\vspace{.5em} % Extra space between sections
+%------------------------------------------------
+
+    
+
+    
+        \NewEntry{9/2012--4/2013}{\textsc{Freelance}}
+    
+
+    \Description{\MarginText{Substantiate - GPS logbook solutions}
+    
+        
+            Substantiate is Australia's leading provider of tax logbook services and products, using a mix of technology and in-house expertise to provide innovative solutions to clients.
+
+        
+    
+        
+            
+
+        
+    
+        
+            Product:
+
+        
+    
+        
+            
+
+        
+    
+        
+            \begin{itemize}
+                \item Tax consulting
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Automate analysis of FBT, FTC and other tax legislation using GPS data and publicly available road databases (Australian road databases + Open Street Map)
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Produce ATO compliant reports for lodgement by client
+            \end{itemize}
+        
+    
+        
+            
+
+        
+    
+        
+            Project responsibilities:
+
+        
+    
+        
+            
+
+        
+    
+        
+            \begin{itemize}
+                \item Leveraging the Skylock platform's GPS capabilities (see other project) extend the Architecture to support reporting and analysis needs of the Substantiate arm of the business
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Create web reporting interface
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Create generic data ingestion platform for bulk, one-off analyses
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Use of data analysis tools (Hadoop ecosystem, NoSQL databases, R etc.) to look at other financial opportunities for clients
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Ad-hoc data analysis and reporting (Generally Ruby Scripting around above tools)
+            \end{itemize}
+        
+    
+
+    }
+
+\vspace{.5em} % Extra space between sections
+%------------------------------------------------
+
+    
+
+    
+        \NewEntry{4/2012--9/2012}{\textsc{Freelance}}
+    
+
+    \Description{\MarginText{Skylock - Cloud-based GPS Security Portal}
+    
+        
+            SkyLock is a cloud-based security product, providing an affordable and intuitive GPS tracking solution for the recreational vehicle market (Cars, Caravans, Boats etc.)
+
+        
+    
+        
+            
+
+        
+    
+        
+            Core product features:
+
+        
+    
+        
+            
+
+        
+    
+        
+            \begin{itemize}
+                \item 24/7 monitoring
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Intuitive Web interface with near-real time event tracking
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Geofencing, Tow alarms, speed alerts and more
+            \end{itemize}
+        
+    
+        
+            
+
+        
+    
+        
+            Project responsibilities:
+
+        
+    
+        
+            
+
+        
+    
+        
+            \begin{itemize}
+                \item Design and deliver solution architecture
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Implementation of secure (OAuth2) RESTful API, integration middleware and micro-service components (Fuse ESB \ MoM \ JEE)
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Oversee Web Development (Spring MVC) stream
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Setup and deployment of HA infrastructure to AWS cloud, including CI and deployment automation
+            \end{itemize}
+        
+    
+
+    }
+
+\vspace{.5em} % Extra space between sections
+%------------------------------------------------
+
+    
+
+    
+        \NewEntry{1/2013--3/2013}{\textsc{Melbourne IT}}
+    
+
+    \Description{\MarginText{Auto-renewal}
+    
+        
+            Part of an E2E solution that delivered industries highest auto-renewal rates for domain names (\textgreater 80\%)
+
+        
+    
+        
+            
+
+        
+    
+        
+            \begin{itemize}
+                \item UX implementation and careful interaction design played critical role in opting in more customers and reduction in opt-out
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Worked with talented Marketing group on communications (on/offline)
+            \end{itemize}
+        
+    
+
+    }
+
+\vspace{.5em} % Extra space between sections
+%------------------------------------------------
+
+    
+        %\NewEntry{website}{\href{http://www.webcentral.com.au/order/}{http://www.webcentral.com.au/order/}} % Project website
+    
+
+    
+        \NewEntry{1/2010--11/2012}{\textsc{Melbourne IT}}
+    
+
+    \Description{\MarginText{Business Transformation Programme (IWS)}
+    
+        
+            The transformation programme is an IT integration and business transformation project brought about primarily to standardise business functions \& processes, and to consolidate core customer information into a single system. This would enable Melbourne IT to more efficiently manage its customers, improve service offerings and 
+
+        
+    
+        
+            
+
+        
+    
+        
+            I have served in a Solution Architect type role around the Web Properties integration piece which forms the all-important pointy part of the value chain – the direct interaction between Melbourne IT and its customers.
+
+        
+    
+        
+            
+
+        
+    
+        
+            My involvement in the project to date has included the following:
+
+        
+    
+        
+            \begin{itemize}
+                \item Acting as a Subject Matter Expert (SME), providing advice on scoping and preparing the Web sub-project’s business requirements
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item High-level design for integrating existing websites, service portals, the new Oracle suite and our existing legacy systems
+            \end{itemize}
+        
+    
+        
+            \begin{itemize}
+                \item Technical lead, including mid-level and detailed designs for the implementation of 5 sub-streams.
+            \end{itemize}
+        
+    
+
+    }
+
+\vspace{.5em} % Extra space between sections
+%------------------------------------------------
+
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\spacedlowsmallcaps{Education}\vspace{1em}
+
+
+
+    \NewEntry{2003-2007}{La Trobe University}
+
+
+    
+        \Description{\MarginText{Cognitive Science / Computer Science}GPA:   \ $\cdotp$\ \ Field of study: Computer Science, Psychology, Usability\newline
+    
+
+    
+
+    }
+\vspace{.5em} % Extra space between sections
+
+
+    \NewEntry{1997-2002}{Billanook College}
+
+
+    
+        \Description{\MarginText{High School}
+    
+
+    
+        
+            
+                \begin{itemize}
+                \item Sports Captain
+                \end{itemize}
+            
+
+        
+            
+                \begin{itemize}
+                \item Represent school at EIS (Eastern school district sports)
+                \end{itemize}
+            
+
+        
+            
+                \begin{itemize}
+                \item Pierre de Coubertin award
+                \end{itemize}
+            
+
+        
+    
+
+    }
+\vspace{.5em} % Extra space between sections
+
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+%\spacedlowsmallcaps{Publications}\vspace{1em}
+
+%\NewEntry{January 2013}{Publication Title}
+
+%\Description{\MarginText{Full Journal Name}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nisl tellus, sodales non pulvinar in, adipiscing sit amet purus. Suspendisse sed facilisis diam. Sed ornare sem nec justo adipiscing nec venenatis lectus commodo. Mauris non neque ligula. Pellentesque sed quam eu felis iaculis iaculis ac a leo. Suspendisse neque neque, placerat id adipiscing et, elementum eu sem.\\ Authors: John \textsc{Smith}, ~James \textsc{Smith}}
+
+%------------------------------------------------
+
+%\NewEntry{Sept. 2012}{Publication Title}
+
+%\Description{\MarginText{Full Journal Name}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nisl tellus, sodales non pulvinar in, adipiscing sit amet purus. Suspendisse sed facilisis diam. Sed ornare sem nec justo adipiscing nec venenatis lectus commodo. Mauris non neque ligula. Pellentesque sed quam eu felis iaculis iaculis ac a leo. Suspendisse neque neque, placerat id adipiscing et, elementum eu sem.\\ Authors: John \textsc{Smith}, ~James \textsc{Smith}}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS
+%----------------------------------------------------------------------------------------
+\spacedlowsmallcaps{Expertise\textbackslash Skills}\vspace{1em}
+
+\Description{\MarginText{Leadership}
+
+% Do LinkedIn Skills
+
+    %\textsc{Change Management}
+    Change Management,
+    %\textsc{DevOps}
+    DevOps,
+    %\textsc{Agile Methodologies}
+    Agile Methodologies,
+    %\textsc{Web Development}
+    Web Development,
+    %\textsc{APIs}
+    APIs,
+    %\textsc{E-commerce}
+    E-commerce,
+    %\textsc{HTML 5}
+    HTML 5,
+    %\textsc{Web Applications}
+    Web Applications,
+    %\textsc{Agile Project Management}
+    Agile Project Management,
+    Continuous Delivery}
+
+% Custom skills supplied via config
+
+    
+        
+        \Description{\MarginText{Technical}
+            Solution Design \& Architecture, REST, APIs, AWS, Puppet, 
+            Automation }
+        
+    
+        
+        \Description{\MarginText{Languages}
+            Java, PHP, Ruby, 
+            Scala }
+        
+    
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	OTHER INFORMATION
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Other Information}\vspace{1em}
+
+\Description{\MarginText{Interests}The Internet\ \ $\cdotp$\ \  Human Computer Interaction and Usability\ \ $\cdotp$\ \  Basketball\ \ $\cdotp$\ \  Waterskiing\ \ $\cdotp$\ \  Web Programming\ \ $\cdotp$\ \  Java Programming\ \ $\cdotp$\ \  cloud computing\ \ $\cdotp$\ \  mobile\ \ $\cdotp$\ \  responsive design}
+%----------------------------------------------------------------------------------------
+
+\AtEndDocument{\vfill%
+% Your end-of-document content
+Produced with love by Latex and https://github.com/mefellows/linkedin2cv
+}
+
+\end{cv}
+
+\end{document}

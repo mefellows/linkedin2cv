@@ -99,12 +99,13 @@ module Linkedin2CV
         token = client.request_access_token(code, redirect_uri: "http://#{request.host}:#{request.port}/auth/callback")
         session[:atoken] = token.token
 
-        # Store in env for command line!
-        file = File.new('.token', 'w')
-        file.write(token.token)
-        file.close
-
+        # CLI Only behaviour
         if !ENV['CLI_ONLY'].nil?
+          # Store in env for command line!
+          file = File.new('.token', 'w')
+          file.write(token.token)
+          file.close
+
           logger.info "Got access token, shutting down!: #{session[:atoken]}"
           Thread.current.thread_variable_set('access_token', token.token)
           Thread.kill(Thread.current)

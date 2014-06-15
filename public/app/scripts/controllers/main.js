@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('linkedin2cv App')
+angular.module('linkedin2cvApp')
     .controller('MainCtrl', ['$scope', '$http', 'Linkedin2CV', function ($scope, $http, Linkedin2CV) {
 
         // Default website

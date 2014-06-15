@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'linkedin2cv/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "linkedin2cv "
+  spec.name          = "linkedin2cv"
   spec.version       = Linkedin2CV::VERSION
   spec.authors       = ["mefellows"]
   spec.email         = ["matt.fellows@onegeek.com.au"]
   spec.summary       = "Linkedin2CV"
-  spec.description   = "An awesome linkedin2cv "
-  spec.homepage      = "https://github.com/mefellows/linkedin2cv "
+  spec.description   = "Turn your LinkedIn Profile into a professional resume in many formats (PDF / HTML5 / LaTeX / Asciidoc)"
+  spec.homepage      = "https://github.com/mefellows/linkedin2cv"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

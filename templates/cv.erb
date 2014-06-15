@@ -65,7 +65,8 @@ end
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass{scrartcl}
+%\documentclass{scrartcl}
+\documentclass{article}
 
 \usepackage[T1]{fontenc}
 
@@ -109,9 +110,11 @@ end
 
 <% end %>
 
+<% if !profile.member_url_resources.nil? %>
 <% for @url in profile.member_url_resources.all %>
 \NewEntry{website}{\href{<%= @url.url %>}{<%= @url.url %>}} % Personal website
 
+<% end %>
 <% end %>
 
 <% if !options['home_phone'].nil? && !options['mobile_phone'].nil? %>
@@ -135,6 +138,7 @@ end
 %	WORK EXPERIENCE
 %----------------------------------------------------------------------------------------
 
+<% if !profile.positions.nil? %>
 \noindent\spacedlowsmallcaps{Professional Experience}\vspace{1em}
 
 <% for @position in profile.positions.all %>
@@ -166,9 +170,11 @@ end
 
 \vspace{1em} % Extra space between major sections
 
+<% end %>
 %----------------------------------------------------------------------------------------
 %	PROJECTS
 %----------------------------------------------------------------------------------------
+<% if !profile.projects.nil? %>
 
 \noindent\spacedlowsmallcaps{Projects}\vspace{1em}
 
@@ -203,11 +209,13 @@ end
 
 \vspace{1em} % Extra space between major sections
 
+<% end %>
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
-
+<% if !profile.educations.nil? %>
 \spacedlowsmallcaps{Education}\vspace{1em}
+
 
 <% for @education in profile.educations.all %>
 
@@ -253,6 +261,7 @@ end
 
 \vspace{1em} % Extra space between major sections
 
+<% end %>
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS
 %----------------------------------------------------------------------------------------
@@ -276,7 +285,7 @@ end
 %----------------------------------------------------------------------------------------
 %	COMPUTER SKILLS
 %----------------------------------------------------------------------------------------
-
+<% if !profile.skills.nil? %>
 \spacedlowsmallcaps{Expertise\textbackslash Skills}\vspace{1em}
 
 \Description{\MarginText{Leadership}
@@ -307,14 +316,16 @@ end
 
 \vspace{1em} % Extra space between major sections
 
+<% end %>
 %----------------------------------------------------------------------------------------
 %	OTHER INFORMATION
 %----------------------------------------------------------------------------------------
+<% if !profile.interests.nil? %>
 
 \spacedlowsmallcaps{Other Information}\vspace{1em}
 
 \Description{\MarginText{Interests}<%= profile.interests.gsub(',', '\\\ \\\ $\\\cdotp$\\\ \\\ ')%>}
-
+<% end %>
 %----------------------------------------------------------------------------------------
 
 \AtEndDocument{\vfill%

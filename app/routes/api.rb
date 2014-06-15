@@ -6,6 +6,7 @@ require 'sinatra/param'
 require "sinatra/json"
 require "json"
 require "sinatra-websocket"
+require "linkedin2cv/converter"
 
 #
 # Public: API for the Application
@@ -14,8 +15,16 @@ module Linkedin2CV
   module Routes
       class API < Sinatra::Application
         helpers Sinatra::Param
+        use Rack::Logger
 
         configure do
+          set :views, 'app/views'
+          set :public_folder, 'public/dist'
+          set :api, ENV['LINKEDIN_API_KEY']
+          set :secret, ENV["LINKEDIN_API_SECRET"]
+          set :logging, true
+          set :server, 'thin'
+          set :port, 5000
           set :json_encoder, :to_json
           set :sockets, []
         end
@@ -36,8 +45,23 @@ module Linkedin2CV
         # Public: Main API entry point to run the Linkedin2CV service
         #
         #
-        get '/api/linkedin2cv /:uri' do
+        get '/api/cv/:name' do
 
+          param :format, String, default: 'latex'
+          param :name, String, required: true
+          param :access_token, String, required: true
+
+          logger.debug("Request received to create a CV. Format: #{params[:format]}, Name: #{params[:name]}, Token: #{params[:access_token]}")
+
+          options = {}
+          options['output_file'] = "/tmp/#{params[:name]}"
+          options['format'] = params[:format]
+
+          converter = Linkedin2CV::Converter.new(params[:access_token])
+          converter.create_resume(options)
+
+          content_type "application/pdf"
+          File.read("#{options['output_file']}.pdf")
         end
 
 
@@ -90,9 +114,9 @@ module Linkedin2CV
         # Override this for custom behaviour.
         #
         def checkPong(msg)
-          log.debug("Checking ping pong for a ping: " + msg['message'])
+          logger.debug("Checking ping pong for a ping: " + msg['message'])
           if (msg['message'] == 'ping')
-            log.debug("Ping hit!")
+            logger.debug("Ping hit!")
             response_obj = {'message' => 'pong'}
           end
         end

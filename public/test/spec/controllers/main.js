@@ -3,7 +3,7 @@
 describe('Controller: MainCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('linkedin2cv GeneratorApp'));
+  beforeEach(module('linkedin2cvGeneratorApp'));
 
   var MainCtrl,
     scope;

@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+
+$: << File.join(File.dirname(__FILE__), "..", "lib")
+require 'linkedin2cv/cli/command'
+
+# Setup the app to work from a base Runner/Command etc.
+Linkedin2CV::MainCommand.run
