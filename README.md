@@ -11,7 +11,7 @@ Oh, and don't bother using the LinkedIn 'Export to PDF' feature - it sucks.
 
 ## Getting Started
 
-First, install [MacTex](http://www.tug.org/mactex/) so that you can produce LaTeX documents. Then, simply run the converter:
+First, install a Tex distribution  ([MacTex](http://www.tug.org/mactex/) or [TexLive](http://www.tug.org/texlive/)) so that you can produce LaTeX documents. Then, simply run the converter:
     
     gem install linkedin2resume
     linkedin2cv convert  --format latex --options config.yml matt.fellows
