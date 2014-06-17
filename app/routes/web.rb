@@ -28,19 +28,16 @@ module Linkedin2CV
         set :threaded, false # This allows sneaky thread manipulation
       end
 
-      # configure :production do
-      #   set :views,         'app/views'
-      #   set :public_folder, 'public/dist'
-      #   set :sessions, true
-      # end
-
       helpers do
         def login?
           !session[:atoken].nil?
         end
 
         def profile
-          linkedin_client.profile unless session[:atoken].nil?
+          if session[:profile].nil?
+            session[:profile] = linkedin_client.profile unless session[:atoken].nil?
+          end
+          session[:profile]
         end
 
         def connections
@@ -59,16 +56,11 @@ module Linkedin2CV
 
       end
 
-      # Public: Main HTML web page to interact with app
+      # Public: Home page
       #
       #
-      # get '/' do
-      #   erb :home
-      # end
-
       get "/" do
-        logger.info "this is interesting"
-        haml :index
+        erb :home
       end
 
       # Public: Run API only temporarily for purposes of CLI client

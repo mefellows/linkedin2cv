@@ -11,7 +11,7 @@ linkedin2cvServices.factory('Linkedin2CV', ['$q', '$rootScope', '$interval', fun
 
     var pongCallback = {};
 
-    var url = 'websocketurl';
+    var url = 'ws://' + window.location.host + '/socket';
     var ws = new WebSocket(url);
 
     ws.onopen = function(){

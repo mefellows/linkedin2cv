@@ -1,23 +1,26 @@
 <div class="header">
   <ul class="nav nav-pills pull-right">
     <li class="active"><a ng-href="#">Home</a></li>
-    <li><a ng-href="http://github.com/mefellows/linkedin2cv-generator">About</a></li>
+    <li><a ng-href="http://github.com/mefellows/linkedin2cv">About</a></li>
+    <% if login?%><li><a ng-href="/auth/logout">Logout</a></li><% end %>
   </ul>
-  <h1 class="text-muted">Linkedin2CV App</h1>
+  <h1 class="text-muted">Linkedin 2 CV</h1>
 </div>
 
 <div class="jumbotron">
-  <h2>Enter your website</h2 >
-  <input ng-model="website" />
-  <p><a class="btn btn-lg btn-success" ng-click='generateLinkedin2CV(website)'>Search<span class="glyphicon glyphicon-ok"></span></a></p>
+  <h2>Login to LinkedIn to get your CV</h2 >
+  <p><a class="btn btn-lg btn-success" >Login<span class="glyphicon glyphicon-ok"></span></a></p>
 </div>
 
 <div class="row marketing">
-  <h3 ng-model="message">{{message}}</h3>
-  </table>
+    <p><a href="/api/cv/#{session[:atoken]}?access_token=#{session[:atoken]}">Download CV</a></p>
 </div>
 
 
 <div class="footer">
   <p>Built with <span class="glyphicon glyphicon-heart"></span> by <a href="http://www.onegeek.com.au">Matt Fellows</a></p>
 </div>
+
+<!--<div>-->
+    <!--<p>Please note: </p>-->
+<!--</div>-->

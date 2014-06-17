@@ -367,10 +367,6 @@ module.exports = function (grunt) {
             ruby: {
                 files: [
                     {
-                        src: '<%= yeoman.dist %>/index.html',
-                        dest: '<%= yeoman.app %>/../../app/views/home.erb'
-                    },
-                    {
                         expand: true,
                         cwd: '<%= yeoman.app %>/bower_components',
                         src: ['**'],
