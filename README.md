@@ -16,7 +16,7 @@ Oh, and don't bother using the LinkedIn 'Export to PDF' feature - it sucks.
 
 There is a basic [web interface](http://linkedin2cv.onegeek.com.au) that lets you download a no-frills, vanilla resume if you don't want to install the gem and customise the output.
 
-### Local / Custom Instnallation
+### Local / Custom Installation
 
 First, install a Tex distribution  ([MacTex](http://www.tug.org/mactex/) or [TexLive](http://www.tug.org/texlive/)) so that you can produce LaTeX documents. Then, simply run the converter:
     
