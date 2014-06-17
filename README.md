@@ -27,7 +27,7 @@ The converter should open up a Web Browser and ask you to sign-in to LinkedIn, e
 
 ## Custom fields/data
 
-Some templates may display extra information, or you may choose to make the resume more intelligent. For example, LinkedIn doesn't connect your projects to your role/company. See the example config.yml file for full details.
+Some templates may display extra information, or you may choose to make the resume more intelligent. For example, LinkedIn doesn't connect your projects to your role/company. See the example [config.yml](https://github.com/mefellows/linkedin2cv/blob/master/spec/mocks/config.yml) file for full details.
 
 ## Contributing your own template
 
