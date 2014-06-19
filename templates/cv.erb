@@ -312,14 +312,33 @@ end
     <% end %>
 <% end %>
 
+<% end %>
+%----------------------------------------------------------------------------------------
+%	References
+%----------------------------------------------------------------------------------------
+<% if !profile.recommendations_received.nil? %>
+\spacedlowsmallcaps{Recommendations}\vspace{1em}
+
+<% for @ref in profile.recommendations_received.all.shift(5) %>
+
+        \NewEntry{<%=@ref.recommendation_type.code.capitalize %>}{\textsc{<%=@ref.recommender.first_name %> <%=@ref.recommender.last_name %>}}
+
+\Description{\MarginText{}
+
+   ``<%= @ref.recommendation_text.strip %>''}
+
+<% end %>
+
 %------------------------------------------------
 
 \vspace{1em} % Extra space between major sections
 
 <% end %>
+
 %----------------------------------------------------------------------------------------
 %	OTHER INFORMATION
 %----------------------------------------------------------------------------------------
+
 <% if !profile.interests.nil? %>
 
 \spacedlowsmallcaps{Other Information}\vspace{1em}

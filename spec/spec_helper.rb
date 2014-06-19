@@ -11,3 +11,6 @@ RSpec.configure do |config|
         to_return(status: 200, body: response_mock, headers: {})
   end
 end
+
+ENV['LINKEDIN_API_KEY'] = 'foo'
+ENV["LINKEDIN_API_SECRET"] = 'bar'
