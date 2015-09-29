@@ -11,7 +11,10 @@ module Linkedin2CV
   EventMachine.run do
     class Linkedin2CVApplication < Sinatra::Application
 
-      configure { set :server, 'thin' }
+      configure { 
+        set :server, 'thin' 
+        register Sinatra::Reloader
+      }
       use Rack::Deflater
       use Linkedin2CV::Routes::API
       use Linkedin2CV::Routes::Web

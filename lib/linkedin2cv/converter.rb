@@ -83,8 +83,15 @@ module Linkedin2CV
       # Auth
       token = auth
 
+      log.info "TOKEN: #{token}"      
+        LinkedIn.configure do |config|
+          config.client_id     = API_KEY
+          config.client_secret = API_SECRET
+          # config.scope = "r_basicprofile"
+        end  
+
       # Get Client info based on fields provided
-      client = LinkedIn::Client.new(API_KEY, API_SECRET, token)
+      client = LinkedIn::API.new(token)
       client.profile(:fields => @profile_fields)
     end
 

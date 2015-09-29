@@ -14,6 +14,7 @@ module Linkedin2CV
       use Rack::Logger
 
       configure do
+        enable :reloader        
         set :views, 'app/views'
         set :public_folder, 'public/dist'
         set :sessions, true
@@ -46,7 +47,7 @@ module Linkedin2CV
 
         private
         def linkedin_client
-          client = LinkedIn::Client.new(settings.api, settings.secret, session[:atoken])
+          client = LinkedIn::API.new(session[:atoken])
           client
         end
 
@@ -73,8 +74,28 @@ module Linkedin2CV
 
       get "/auth" do
         logger.info "Authing..."
-        client = LinkedIn::Client.new(settings.api, settings.secret)
-        session[:authorize_url] = client.authorize_url(redirect_uri: "http://#{request.host}:#{request.port}/auth/callback")
+        
+        LinkedIn.configure do |config|
+          config.client_id     = settings.api
+          config.client_secret = settings.secret
+          config.scope = "r_fullprofile"
+          # This must exactly match the redirect URI you set on your application's
+          # settings page. If your redirect_uri is dynamic, pass it into
+          # `auth_code_url` instead.
+          config.redirect_uri  = "http://#{request.host}:#{request.port}/auth/callback"
+        end
+
+        # client = LinkedIn::Client.new(settings.api, settings.secret)
+        client = LinkedIn::OAuth2.new
+
+        url = client.auth_code_url({redirect_uri: "http://#{request.host}:#{request.port}/auth/callback"})
+        logger.info("Auth code URL: #{url}. yfoo") 
+
+
+
+        client = LinkedIn::OAuth2.new
+        # session[:authorize_url] = client.auth_code_url(redirect_uri: "http://#{request.host}:#{request.port}/auth/callback")
+        session[:authorize_url] = url
         redirect session[:authorize_url]
       end
 
@@ -87,8 +108,18 @@ module Linkedin2CV
         code = params[:code]
         logger.info "Auth code received #{code}"
         logger.info "OK, so getting a URL to authorize and get my access token"
-        client = LinkedIn::Client.new(settings.api, settings.secret)
-        token = client.request_access_token(code, redirect_uri: "http://#{request.host}:#{request.port}/auth/callback")
+        
+        LinkedIn.configure do |config|
+          config.client_id     = settings.api
+          config.client_secret = settings.secret
+          config.scope = "r_fullprofile"
+          # This must exactly match the redirect URI you set on your application's
+          # settings page. If your redirect_uri is dynamic, pass it into
+          # `auth_code_url` instead.
+          config.redirect_uri  = "http://#{request.host}:#{request.port}/auth/callback"
+        end        
+        client = LinkedIn::OAuth2.new
+        token = client.get_access_token(code) #, redirect_uri: "http://#{request.host}:#{request.port}/auth/callback")
         session[:atoken] = token.token
 
         # CLI Only behaviour
